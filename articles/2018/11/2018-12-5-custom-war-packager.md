@@ -16,7 +16,7 @@ translator: linuxsuren
 [Jenkinsfile Runner](https://github.com/jenkinsci/jenkinsfile-runner) 包。
 它可以打包 Jenkins、插件以及配置为开箱即用的发行版。
 `Custom WAR Packager` 是我们在博客 
-A Cloud Native Jenkins(/blog/2018/09/12/speaker-blog-a-cloud-native-jenkins/) 中介绍过的无状态 `Jenkins master` 工具链的一部分。这个工具链已经在 link:https://jenkins-x.io[Jenkins X] 中被使用，用于构建 serverless 镜像(https://github.com/jenkins-x/jenkins-x-serverless)。
+A Cloud Native Jenkins(/blog/2018/09/12/speaker-blog-a-cloud-native-jenkins/) 中介绍过的无状态 `Jenkins master` 工具链的一部分。这个工具链已经在 [Jenkins X][jenkins-x] 中被使用，用于构建 serverless 镜像(https://github.com/jenkins-x/jenkins-x-serverless)。
 
 在这篇文章中，我将会介绍几种 `Custom WAR Packager` 常见的使用场景。
 
@@ -51,8 +51,8 @@ Custom WAR Packager 不仅支持发布版本，还可以构建部署到
 
 Custom WAR Packager 还支持下面的配置选项：
 
-** [Jenkins 配置即代码](https://github.com/jenkinsci/configuration-as-code-plugin) 的 YAMl 文件
-** [Groovy Hooks](https://wiki.jenkins.io/display/JENKINS/Groovy+Hook+Script) （例如：预配置的 init hooks）
+** [Jenkins 配置即代码][casc-repo] 的 YAMl 文件
+** [Groovy Hooks][groovy-hooks] （例如：预配置的 init hooks）
 ** 系统属性
 
 == WAR 打包
@@ -107,7 +107,7 @@ casc:
 
 == Docker 打包
 
-为了打包 Docker，Custom WAR Packager 使用官方的 Docker 镜像 [jenkins/jenkins](https://hub.docker.com/r/jenkins/jenkins/)
+为了打包 Docker，Custom WAR Packager 使用官方的 Docker 镜像 [jenkins/jenkins][jenkins-image]
 或同样格式的其他镜像。构建中，WAR 文件会被该工具所替换。这也就意味着镜像的 **所有** 特色在该自定义构建中都可用：
 `plugins.txt`, Java 选项, Groovy hooks 等等。
 
@@ -126,7 +126,7 @@ buildSettings:
     tag: "jenkins/custom-war-packager-casc-demo"
 ```
 
-例如：[示例](https://github.com/jenkinsci/custom-war-packager/tree/master/demo/external-logging-elasticsearch)
+例如：[示例][custom-war-packager-demo]
 展示了打包带有将构建日志存储到 Elasticsearch 的 Docker 镜像。
 尽管这些已经作为了 jep:207[] 和 jep:210[] 的一部分，你还是可以查看这个示例，了解该 Docker 镜像是如何配置、连接到 Elasicsearch、
 然后启动外部的日志存储，而不需要改变日志的界面。一个 Docker Compose 文件对于运行整个集群是必要的。
@@ -135,7 +135,7 @@ buildSettings:
 
 这可能是 Jenkinsfile Runner 最有意思的模式。
 三月份，在开发者列表中 [宣布](https://groups.google.com/d/msg/jenkinsci-dev/gjz3CDhi-kk/1mwi_oa0AQAJ)了
-一个新的项目 [Jenkinsfile Runner](https://github.com/jenkinsci/jenkinsfile-runner)。
+一个新的项目 [Jenkinsfile Runner][jenkinsfile-runner-repo]。
 大体的思路是，支持在单一 master 上只运行一次并打印输出到控制台的 Jenkins 流水线。
 Jenkinsfile Runner 作为命令或一个 Docker 镜像来运行。
 虽然只推荐 Docker 的形式，但是 Custom WAR Packager 都能够生成。
@@ -174,17 +174,17 @@ buildSettings:
       build: true
 ```
 
-你可以从 [这里](https://github.com/jenkinsci/custom-war-packager/tree/master/demo/jenkinsfile-runner)
+你可以从 [这里][jenkinsfile-runner]
 找到用 Custom WAR Packager 打包 Jenkinsfile Runner 的例子。
 
 == 更多
 
 还有很多其他的特色没有在本文中提到。例如：它还可以修改 Maven 构建配置或增加、替换 Jenkins 核心中的库（例如：Remoting）。
-请查看 [Custom WAR Packager 文档](https://github.com/jenkinsci/custom-war-packager/blob/master/README.md)
+请查看 [Custom WAR Packager 文档][custom-war-packager-doc]
 获取更多信息。这个库中还有很多示例。
 
-如果你有兴趣对这个库做贡献，请创建 PR 并抄送 [@oleg-nenashev](https://github.com/oleg-nenashev/)
-和 [Raul Arabaolaza](https://github.com/raul-arabaolaza)，第二位维护者正在研究 Jenkins 自动化测试流程。
+如果你有兴趣对这个库做贡献，请创建 PR 并抄送 [@oleg-nenashev][oleg-nenashev]
+和 [Raul Arabaolaza][raul-arabaolaza]，第二位维护者正在研究 Jenkins 自动化测试流程。
 
 == 下一步？
 
@@ -193,6 +193,18 @@ buildSettings:
 * 增加对插件依赖传递的检查以便在构建过程中发现冲突
 * 允许在 YAML 配置文件中设置各种系统属性和 Java 选项
 * 改进 Jenkinsfile Runner 的性能
-* 集成到 Jenkins 集成测试流程中，(查看 Jenkins 流水线库中的 [essentialsTest()](https://github.com/jenkins-infra/pipeline-library/blob/master/vars/essentialsTest.groovy))
+* 集成到 Jenkins 集成测试流程中，(查看 Jenkins 流水线库中的 [essentialsTest()][essentialsTest])
 
 还有很多其他的任务需要在 Custom WAR Packager 中实现，但是，现在它已经能够让 Jenkins 用户构建他们自己的发行版。
+
+[jenkins-x]: https://jenkins-x.io
+[casc-repo]: https://github.com/jenkinsci/configuration-as-code-plugin
+[groovy-hooks]: https://wiki.jenkins.io/display/JENKINS/Groovy+Hook+Script
+[jenkins-image]: https://hub.docker.com/r/jenkins/jenkins/
+[custom-war-packager-demo]: https://github.com/jenkinsci/custom-war-packager/tree/master/demo/external-logging-elasticsearch
+[jenkinsfile-runner]: https://github.com/jenkinsci/custom-war-packager/tree/master/demo/jenkinsfile-runner
+[jenkinsfile-runner-repo]: https://github.com/jenkinsci/jenkinsfile-runner
+[custom-war-packager-doc]: https://github.com/jenkinsci/custom-war-packager/blob/master/README.md
+[oleg-nenashev]: https://github.com/oleg-nenashev/
+[raul-arabaolaza]: https://github.com/raul-arabaolaza
+[essentialsTest]: https://github.com/jenkins-infra/pipeline-library/blob/master/vars/essentialsTest.groovy
