@@ -21,6 +21,6 @@ author: linuxsuren
 
 另一则好消息是我们将通过此官方微信公众号，陆续推出 Jenkins 相关系列视频，由浅入深地为使用者们介绍 Jenkins 相关知识及使用经验。对于“如何构建特定语言的项目”、“如何在 Kubernetes 集群中更好地利用 Jenkins ”以及“如何排查问题”等大家感兴趣的热门话题，都可以从这些视频中得到经验分享。
 
-最后，欢迎订阅 Jenkins 中文邮件组（https://groups.google.com/forum/#!forum/jenkinsci-zh）与我们进行交流和互动。衷心希望能够通过更多小伙伴的加入，不断完善开源社区氛围，深度技术互动，协力共建一个更加开放、更加包容、更加活跃的 Jenkins 社区！
+最后，欢迎订阅 [Jenkins 中文邮件组](https://groups.google.com/forum/#!forum/jenkinsci-zh)与我们进行交流和互动。衷心希望能够通过更多小伙伴的加入，不断完善开源社区氛围，深度技术互动，协力共建一个更加开放、更加包容、更加活跃的 Jenkins 社区！
 
 有内容、有态度的 Jenkins 社区，期待有你同行！
