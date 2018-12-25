@@ -1,5 +1,6 @@
 ---
 title: "从 Jenkins Master 扩展网络连接"
+description: "从 Jenkins Master 扩展网络连接"
 tags:
 - jenkinsworld
 - jenkinsworld2018
