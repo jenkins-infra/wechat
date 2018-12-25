@@ -13,10 +13,7 @@ translator: linuxsuren
 
 ## 官方的
 
-[source]
-----
-docker pull jenkins/jenkins
-----
+`docker pull jenkins/jenkins`
 
 例如：[https://hub.docker.com/r/jenkins/jenkins/](https://hub.docker.com/r/jenkins/jenkins/) 是正确的仓库。
 
