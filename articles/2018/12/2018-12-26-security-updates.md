@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Jenkins 的重要安全更新
+description: 重要安全更新
 tags:
 - core
 - security
@@ -12,8 +13,8 @@ translator: linuxsuren
 由于 2.150.1 是新的 LTS 中的第一个版本，而且，我们还发布了上一个 LTS 2.138.4 版本的安全更新。
 这使得管理员们可以安装今天的安全修复，而不必立即升级到新的 LTS 版本。
 
-查看[安全报告](/security/advisory/2018-12-05)，了解有哪些被修复。
-查看我们的 [LTS 2.138.4 升级指导](/doc/upgrade-guide/2.138/#upgrading-to-jenkins-lts-2-138-4)，了解影响范围。
+查看 link:/security/advisory/2018-12-05[安全报告]，了解有哪些被修复。
+查看我们的 link:/doc/upgrade-guide/2.138/#upgrading-to-jenkins-lts-2-138-4[LTS 2.138.4 升级指导]，了解影响范围。
 
 ### 当前修复中有关之前发布变更的部分
 
