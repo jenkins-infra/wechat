@@ -1,10 +1,11 @@
 ---
-:layout: post
-:title: Docker Hub 上的官方 Jenkins 镜像
-:tags:
+layout: post
+title: Docker Hub 上的官方 Jenkins 镜像
+description: 正确地使用 Jenkins 镜像
+tags:
 - docker
-:author: batmat
-:translator: linuxsuren
+author: batmat
+translator: linuxsuren
 ---
 
 目前，在 Docker Hub 上有三个不同的仓库正（或曾经）被当作“官方” Jenkins 镜像。
