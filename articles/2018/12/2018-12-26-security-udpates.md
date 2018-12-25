@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Jenkins 的重要安全更新
+description: 重要安全更新
 tags:
 - core
 - security
