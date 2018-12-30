@@ -1,7 +1,7 @@
 ---
 title: Jenkins 微信订阅号
 description: 来自 Jenkins 官方的消息
-author: 赵晓杰
+author: linuxsuren
 ---
 
 Jenkins 作为 CI/CD 领域里非常有实力和生命力的平台，不但在国外有很多用户，在国内也有很多的拥趸者。大家拥抱 Jenkins，不仅仅因为它是新的方向，更因为这背后有着一个非常开放、活跃的开源社区。

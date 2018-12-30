@@ -2,7 +2,7 @@
 title: 在 VS Code 中校验 Jenkinsfile
 description: VS Code 中的 Jenkinsfile 插件
 author: janjoerke
-translator: 赵晓杰
+translator: linuxsuren
 ---
 
 在日常工作中，我经常需要创建或修改很多 Jenkinsfile，有时还会发生错误。这是一个非常繁琐的流程——修改 Jenkinsfile，提交、推送，然后等 Jenkins 提醒你少加了一个括号。
