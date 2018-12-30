@@ -9,7 +9,7 @@ tags:
 - scalability
 - remoting
 author: jglick
-translator: 杨帆
+translator: sailingwithoutwind
 ---
 
 ![DevOps World | Jenkins World 2018](/images/conferences/devops-world-2018.jpg)
