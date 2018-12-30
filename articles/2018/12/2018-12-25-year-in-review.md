@@ -22,7 +22,7 @@ translator: raychou1203
 * 这些新的形式带来了新的协作方式。例如：[中文本地化 SIG](https://jenkins.io/sigs/chinese-localization/)运营的 [微信公众号](https://jenkins.io/sigs/chinese-localization/#wechat)和[本地化网站](https://jenkins.io/zh/)。[平台 SIG](https://jenkins.io/sigs/platform/) 在 [Java 11 support](https://jenkins.io/zh/blog/2018/12/14/java11-preview-availability/) 中也给予了不少帮助。
 * 我也很高兴看到新一批领导者。由于害怕遗漏一些人，所以我不打算在此一一列出，我们在今年秋天祝贺他们中的许多人作为 [Jenkins 大使](https://flic.kr/p/2asPXx1)（请在明年[提名更多人](https://wiki.jenkins.io/display/JENKINS/Jenkins+Ambassador)!）。那些领导关键工作的人往往是那些不熟悉这些角色的人。
 * 一些领导者也努力发掘新的贡献者。我们正在有意识地思考，我们哪一部分的潜在贡献者没有被发掘出来，为什么没有被发掘出来。这也是任一个企业都在做的事情。同时我们也是 [Google Summer of Code](https://jenkins.io/zh/blog/2018/10/14/gsoc2018-results/) 和 [Outreachy](https://jenkins.io/zh/blog/2018/12/10/outreachy-audit-log-plugin/) 参与者。
-* 今年我们的安全流程和修复速度再次大幅提升，反映出用户对我们的信任也随之增强。例如，[我们今年推出了遥测系统]https://jenkins.io/zh/blog/2018/10/09/telemetry/)，通知我们更快地开发出更好的修复方案。
+* 今年我们的安全流程和修复速度再次大幅提升，反映出用户对我们的信任也随之增强。例如，[我们今年推出了遥测系统](https://jenkins.io/zh/blog/2018/10/09/telemetry/)，通知我们更快地开发出更好的修复方案。
 
 现在，社区改进的最重要的地方是我们为您使用的软件带来的影响。在这一方面，我认为我们在2018年做得不错，产生了我所谓的“[五个超级武器](https://www.youtube.com/watch?v=qE3tfS7k1VI)”
 
