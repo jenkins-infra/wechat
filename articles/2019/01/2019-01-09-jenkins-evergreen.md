@@ -11,7 +11,7 @@ translator: runzexia
 
 当我第一次{{< exref "写 Jenkins Evergreen 相关的文章" "https://jenkins.io/blog/2018/04/06/jenkins-essentials/" >}}， 后来被称为 "Jenkins Essentials"，我提到的一系列的未来的发展在接下来的几个月里已经变成了 **现实** 。 今年在旧金山举办的 DevOps World - Jenkins World 会议上，我会介绍 Jenkins Evergreen 背后哲学的更多细节，展示我们已经做了什么，并且讨论这个激进的 Jenkins 发行版的走向。
 
-{{< img "/images/post-images/2019-01-09-jenkins-evergreen/magician_256.png" >}}
+{{< img "/images/evergreen/magician_256.png" >}}
 
 正如我在第一篇博客以及{{< exref "JEP-300" "https://github.com/jenkinsci/jep/tree/master/jep/300" >}}中所讨论的 Jenkins Evergreen 的前两大支柱是我们关注的要点.
 
