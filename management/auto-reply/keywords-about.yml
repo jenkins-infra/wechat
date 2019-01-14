@@ -1,0 +1,8 @@
+keyword: 关于
+msgType: news
+articleCount: 1
+articles:
+- title: "Jenkins 中文社区"
+  description: "我们是由 Jenkins 社区在国内的爱好者、贡献者组成"
+  picUrl: "https://linuxsuren.github.io/blog/"
+  url: "https://jenkins-zh.github.io/about/"

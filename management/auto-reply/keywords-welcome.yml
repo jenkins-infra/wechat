@@ -1,0 +1,10 @@
+keyword: welcome
+msgType: text
+content: |-
+        您好，欢迎关注 Jenkins 中文社区微信公众号！
+
+        Jenkins 官网地址 https://jenkins.io/zh/
+
+        支持的关键字回复：关于
+
+        支持搜索历史文章：搜索 关键字，例如：搜索 配置
