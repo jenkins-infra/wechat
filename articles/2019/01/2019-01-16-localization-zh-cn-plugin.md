@@ -11,4 +11,4 @@ toc: true
 
 安装简体中文插件也很简单，只要在 Jenkins 的插件管理界面上，搜索*中文*就能找到该插件。安装并重启后就能看到中文界面。
 
-更多细节请查看{{< exref "变更记录" "https://jenkins.io/changelog/" >}}。欢迎对中文本地化工作感兴趣的同学加入我们！
+更多细节请查看{{< exref "变更记录" "https://jenkins.io/changelog/" >}}。欢迎对中文本地化工作感兴趣的同学[加入我们]({{< relref "about/how-to-involve.md" >}})！
