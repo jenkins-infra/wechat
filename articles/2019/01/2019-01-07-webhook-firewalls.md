@@ -1,6 +1,6 @@
 ---
 title: "在安全防火墙内通过 WebHook 触发构建"
-description: "谁说局域网里就不能带 GitHub 上的 WebHook 玩？"
+description: "谁说局域网里就不能带 GitHub 的 WebHook 玩？"
 tags:
 - jenkins
 - webhooks
