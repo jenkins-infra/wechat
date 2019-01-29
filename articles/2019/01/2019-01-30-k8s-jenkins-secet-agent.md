@@ -1,5 +1,6 @@
 ---
 title: "Jenkins 和 Kubernetes -云上的神秘代理"
+description: "运行在 K8S 上的 Jenkins 动态节点"
 tags:
 - jenkinsworld
 - jenkinsworld2018
