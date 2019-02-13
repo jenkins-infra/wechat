@@ -1,6 +1,6 @@
 ---
-title: Outreachy 实习生提供了 Jenkins 对审计日志的支持
-description: "运行在 K8S 上的 Jenkins 动态节点"
+title: Jenkins 对审计日志的支持
+description: "Outreachy 实习生提供了 Jenkins 对审计日志的支持"
 tags:
 - community
 - outreachy
@@ -16,7 +16,7 @@ translator: linuxsuren
 我很高兴地说，Jenkins 项目和我的雇主 [CloudBees](https://www.cloudbees.com) 对此非常支持。
 
 基于我们之前在 GSoC 上指导学生的付出，今年我们已经加入 Outreachy 并指导了两个实习生。
-在 Outreachy 的这次活动中，我们的实习生 [David Olorundare](https://github.com/Lathaguna[Latha Gunasekar] and https://github.com/davidolorundare) 将与我一起研发 [Jenkins 对审计日志的支持](https://github.com/jenkinsci/audit-log-plugin)。
+在 Outreachy 的这次活动中，我们的实习生 [David Olorundare](https://github.com/davidolorundare) 和 [LathaGunasekar](https://github.com/Lathaguna) 将与我一起研发 [Jenkins 对审计日志的支持](https://github.com/jenkinsci/audit-log-plugin)。
 我很高兴欢迎 David 和 Latha, 并期待他们能在软件工程专业和对开源社区的贡献上都有所收获。
 请继续关注后续博客对他们的介绍。
 
