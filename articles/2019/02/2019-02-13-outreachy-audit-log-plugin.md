@@ -1,6 +1,7 @@
 ---
 title: Jenkins 对审计日志的支持
 description: "Outreachy 实习生提供了 Jenkins 对审计日志的支持"
+date: 2019-02-13
 tags:
 - community
 - outreachy

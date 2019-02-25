@@ -2,6 +2,7 @@
 layout: post
 title: "Java 11 预览支持已在 Jenkins 2.155+ 中可用"
 description: "Java 11 预览支持已在 Jenkins 2.155+ 中可用"
+date: 2019-02-20
 tags:
 - core
 - developer
