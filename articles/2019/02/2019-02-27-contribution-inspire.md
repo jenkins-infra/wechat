@@ -10,11 +10,16 @@ author: linuxsuren
 本着给社区贡献者谋福利的想法，Jenkins 中文社区携手“人民邮电出版社”给大家提供三本技术相关的书籍。从19年3月开始，截止到5月，我们会给予三名贡献者每人一本书。我们会在下次公众号文章中介绍评选规则，欢迎任何一位认可开源、希望参与开源的朋友提出你的建议，不要吝惜你的 PR。获选的同学，按照贡献量可以从下面的列表中依次任选一本：
 
 ![](../../../images/articles/2019/02/algorithm.jpg)
+![](../../../images/articles/2019/02/building.microservices.jpg)
 ![](../../../images/articles/2019/02/clean.code.jpg)
 ![](../../../images/articles/2019/02/devops-book.jpg)
+![](../../../images/articles/2019/02/Go.concurrency.in.practice.jpg)
+![](../../../images/articles/2019/02/IaC.jpg)
 ![](../../../images/articles/2019/02/java8.jpg)
 ![](../../../images/articles/2019/02/paul.graham.jpg)
+![](../../../images/articles/2019/02/refactor.jpg)
 ![](../../../images/articles/2019/02/the.information.jpg)
 ![](../../../images/articles/2019/02/the.art.of.computer.programming.jpg)
+
 
 最后，再次让我们对“人民邮电出版社”给予开源社区的大力支持表示感谢。
