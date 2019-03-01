@@ -8,6 +8,9 @@ tags:
 - cloud-native
 author: oleg_nenashev
 translator: linuxsuren
+share:
+- AlaudaCloud
+- linuxpk
 ---
 
 我打算给 Jenkins 管理员和开发者介绍一个新的工具 

@@ -6,6 +6,8 @@ tags:
 - community
 author: kohsuke
 translator: raychou1203
+share:
+- linuxpk
 ---
 
 临近年终，是一个思考总结、展望全局的好时机。那就让我们暂时从日常繁复的工作中停下脚步，一起来盘点 Jenkins 在 2018 这一年的得失与喜乐。
