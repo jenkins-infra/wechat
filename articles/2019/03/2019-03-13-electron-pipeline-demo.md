@@ -9,7 +9,7 @@ tags:
 author: zacker330
 original: https://showme.codes/2019-03-10/electronjs-pipeline-demo/
 ---
-面向读者：最好是了解 Jenkins 流水线的基本语法。
+面向读者：需要了解 Jenkins 流水线的基本语法。
 
 Electron 是由 Github 开发，用 HTML，CSS 和 JavaScript 来构建跨平台桌面应用程序的一个开源库。
 
@@ -118,6 +118,7 @@ def uploadArtifact(def appName, def appVersion, def artifactPath){
 
 ### 小结
 上例中，Electron 应用的流水线设计思路，不只是针对 Electron 应用，所有的跨平台应用的流水线都可以参考此思路进行设计。设计思路大概如下：
+
 1. 多平台构建并行化。本文只有操作系统的类型这个维度进行了说明。现实中，还需要考虑其它维度，如系统位数（32位、64位）、各操作系统下的各版本。
 2. 各平台下的构建只做一次编译打包。并将制品上传到制品库，以方便后续步骤或阶段使用。
 3. 全局变量与平台相关变量进行分离。
