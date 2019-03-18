@@ -19,7 +19,7 @@ Jenkins 的贡献者们[已经决定](https://groups.google.com/forum/#!topic/je
 
 此时，作为一名用户，又意味着什么呢？
 
-* 首先，不会有大的中断。还是同样的人，URL 地址不会变，也会有正常的发布。决策方式也会延续，pull request 也不会发生变化。改变会持续地发生。
+* 首先，不会有大的中断。还是同样的人，URL 地址不会变，也会有正常的发布。决策方式也会延续，pull request 也不会发生变化。改变会逐步的进行。
 
 * 这是 Jenkins 项目在这个领域的成熟和重要性的又一证明。[在全球有25万个 Jenkins 在运行着](http://stats.jenkins.io/jenkins-stats/svg/svgs.html)，这着实从 IoT 到游戏、从云原生应用到机器学习项目撼动着整个软件研发的世界。对于任何寻求开放异构 DevOps 策略的人来说，
 Jenkins 是一个显然、安全的选择。
