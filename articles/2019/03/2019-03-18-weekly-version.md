@@ -27,3 +27,7 @@ author: linuxsuren
 * 通知管理员关于潜在的不安全的权限设置，导致以虚拟系统用户运行构建。
 * 在 Microsoft Docker 中的 Windows Server 2016 上工作空间和归档文件的浏览不可用。(在 2.154 中引入)
 * 开发者: StringParameterValue.getValue() 现在返回 String 以避免不必要的类型转换。
+
+# 简体中文插件 0.0.14
+
+新增了多条中文词条，更多细节从查看[变更日志](https://github.com/jenkinsci/localization-zh-cn-plugin/blob/master/CHANGELOG.md)。
