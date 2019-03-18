@@ -7,7 +7,7 @@ tags:
 author: linuxsuren
 ---
 
-# Jenkins LTS 2.164.1 更新内容如下：
+### Jenkins LTS 2.164.1 更新内容如下：
 
 * Java 11 现已全面支持。 自 2.150.x 开始在 Java 11 上运行 Jenkins 的多项改进，包括：支持插件在它们的元数据中申明最小 Java 版本，并拒绝加载不兼容的插件，以及当运行在 Java11 上时安装新的 JAXB 插件后允许使用 JAXB 的 API. (博客发布的申明, 运行在 Java 11, 升级到 Java 11, issue 52012, issue 52282, issue 55076, issue 55048, issue 55980, issue 55681, issue 52285)
 * 当列出一个指定目录时 list-jobs 不再进行递归。 (issue 48220)
@@ -21,13 +21,13 @@ author: linuxsuren
 * 开发者: 登陆和注册页面在 2.129 中重新设计了，现在可以从多个插件中接收风格贡献 (SimplePageDecorator 的视图页面 footer) (issue 54325)
 
 
-# Jenkins 每周版 2.168 更新内容如下：
+### Jenkins 每周版 2.168 更新内容如下：
 
 * 优化移动端的登陆、加载和重启界面。
 * 通知管理员关于潜在的不安全的权限设置，导致以虚拟系统用户运行构建。
 * 在 Microsoft Docker 中的 Windows Server 2016 上工作空间和归档文件的浏览不可用。(在 2.154 中引入)
 * 开发者: StringParameterValue.getValue() 现在返回 String 以避免不必要的类型转换。
 
-# 简体中文插件 0.0.14
+### 简体中文插件 0.0.14
 
 新增了多条中文词条，更多细节从查看[变更日志](https://github.com/jenkinsci/localization-zh-cn-plugin/blob/master/CHANGELOG.md)。
