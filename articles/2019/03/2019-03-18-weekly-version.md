@@ -1,6 +1,6 @@
 ---
-title: "MPL - 模块化的流水线库"
-description: "Jenkins 流水线共享库技术实践"
+title: "Jenkins 更新通知"
+description: "Jenkins LTS、Weekly 以及简体中文插件更新"
 date: 2019-03-20
 tags:
 - weekly
