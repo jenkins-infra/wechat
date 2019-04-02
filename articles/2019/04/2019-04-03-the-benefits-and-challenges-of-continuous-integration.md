@@ -1,7 +1,7 @@
 ---
 title: "持续集成的收益与挑战"
-description: "本文介绍了持续集成的定义，并解释了实施CI的各种收益与挑战。"
-date: 2019-03-31
+description: "本文介绍了持续集成的定义，并解释了实施CI的各种收益与挑战"
+date: 2019-04-03
 tags:
 - continuous integration
 - ci
