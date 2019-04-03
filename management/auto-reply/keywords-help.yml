@@ -1,0 +1,16 @@
+keyword: 帮助
+msgType: text
+content: |-
+        该帮助系统是由 Jenkins 中文社区开发，源码托管地址为
+        https://github.com/jenkins-zh/wechat-backend
+
+        格式为：[命令 -- 描述]
+        支持的命令列表：
+
+        关于 -- 介绍 Jenkins 中文社区
+        welcome -- 关注后收到的欢迎消息
+        聊天室 -- 获取社区聊天室信息
+        视频 -- 获取社区录制的视频
+        加入 -- 加入 Jenkins 中文社区在 GitHub 上的组织
+        搜索 关键字 -- 支持搜索社区中的技术文章，例如：搜索 配置
+        帮助 -- 完整的命令介绍
