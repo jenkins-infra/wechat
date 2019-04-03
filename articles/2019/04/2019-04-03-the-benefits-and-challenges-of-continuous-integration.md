@@ -6,7 +6,7 @@ tags:
 - continuous integration
 - ci
 author: Jeffrey Lee
-translator: donghui
+translator: donhui
 original: https://dzone.com/articles/the-benefits-and-the-drawbacks-of-continuous-integ
 ---
 
