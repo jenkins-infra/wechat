@@ -6,7 +6,7 @@ All articles should be open-source, every contributor could create a PR. Once we
 
 # TODO List
 
-Pick up a task from [here](https://issues.jenkins-ci.org/secure/RapidBoard.jspa?rapidView=536&view=detail), if you're interesting in contribution. See our [contributing guide](CONTRIBUTING.md).
+Pick up a task from [here](https://github.com/orgs/jenkins-zh/projects/2), if you're interesting in contribution. See our [contributing guide](CONTRIBUTING.md).
 
 You can find all contributors at [here](https://github.com/jenkins-infra/wechat/tree/master/management/contributors).
 
