@@ -20,7 +20,7 @@ links:
 > NOTE: 这是由 [Java 11 支持团队](https://github.com/orgs/jenkinsci/teams/java11-support) 联合撰写的博客。
 在 12 月 18 号（UTC时间下午4点）我们也会在 Jenkins 在线 Meetup 展示对 Java 11 的预览支持。（[链接](https://www.meetup.com/Jenkins-online-meetup/events/257008190/)）
 
-![Jenkins Java](images/logos/formal/256.png)
+![Jenkins Java](../../../images/logos/formal/256.png)
 
 Jenkins 作为领先的开源自动化服务器之一，目前仍然只支持到 Java 8。在 9 月 25 日 OpenJDK 11 发布了。这是一个长期支持版本，并将持续多年，我们想要在 Jenkins 项目中对这个版本进行全面的支持。在过去的一年中，许多贡献者一直致力于在项目中支持 Java 11（Jenkins JEP-211）。这是一条艰辛的道路，但是现在，代表 [Jenkins Platform SIG](https://jenkins.io/sigs/platform)，我们很高兴的宣布在 Jenkins 每周发布提供 Java 11 预览！
 

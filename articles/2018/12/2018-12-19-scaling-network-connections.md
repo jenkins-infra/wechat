@@ -12,7 +12,7 @@ author: jglick
 translator: sailingwithoutwind
 ---
 
-![DevOps World | Jenkins World 2018](/images/conferences/devops-world-2018.jpg)
+![DevOps World | Jenkins World 2018](../../../images/conferences/devops-world-2018.jpg)
 
 Oleg Nenashev 和我今年将在旧金山的 DevOps World | Jenkins World 上，做[从 Jenkins Master 扩展网络连接](https://devopsworldjenkinsworld2018.sched.com/event/F9NP) 的演讲。
 多年来，我们一直致力于分析、优化和加强 Remoting channel，
