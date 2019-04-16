@@ -14,8 +14,10 @@
 
 - [ ] 原创，我申明当前 PR 中的文章是由我本人创作
 - [ ] 翻译，为了方便大家 Review，我已经把原文地址拷贝到了[这里](https://jenkins-zh.cn/)
-- [ ] 维护
+    - [ ] 我已阅读[翻译规范](https://github.com/jenkins-zh/translation-spec)
 - [ ] 我已阅读[文章发布规则](management/operators/README.md)
+- [ ] 我已阅读[文章编写格式](articles/README.md)
+- [ ] 维护
 
 ### 发布
 
