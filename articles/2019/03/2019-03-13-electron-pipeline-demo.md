@@ -9,6 +9,8 @@ tags:
 author: zacker330
 original: https://showme.codes/2019-03-10/electronjs-pipeline-demo/
 ---
+> 审校：LinuxSuRen（[https://github.com/LinuxSuRen](https://github.com/LinuxSuRen)）
+
 面向读者：需要了解 Jenkins 流水线的基本语法。
 
 Electron 是由 Github 开发，用 HTML，CSS 和 JavaScript 来构建跨平台桌面应用程序的一个开源库。
@@ -131,6 +133,4 @@ def uploadArtifact(def appName, def appVersion, def artifactPath){
 * Electron 版本管理：[https://electronjs.org/docs/tutorial/electron-versioning#semver](https://electronjs.org/docs/tutorial/electron-versioning#semver)
 
 
-### 审校
-* LinuxSuRen（[https://github.com/LinuxSuRen](https://github.com/LinuxSuRen)）
 
