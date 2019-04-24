@@ -29,5 +29,5 @@ pipeline {
     }
 }
 
-# DSL withChangeSets has not been released, see also
-# https://github.com/LinuxSuRen/change-handler
+// DSL withChangeSets has not been released, see also
+// https://github.com/LinuxSuRen/change-handler

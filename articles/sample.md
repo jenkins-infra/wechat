@@ -1,10 +1,10 @@
 ---
-title: 标题
-description: 描述
-author: 作者
+title: 标题(*)
+description: 描述(*)
+author: 作者(*)
 translator: 译者
 original: 原文链接
-poster: 封面图片
+poster: 封面图片(*)
 toc: 这里如果设置为 true 的话，可以生成目录
 date: 2019-02-13
 tags:
