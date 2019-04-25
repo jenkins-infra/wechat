@@ -6,11 +6,11 @@ pipeline {
     agent any
 
     stages{
-        when {
-            changeRequest target: 'master'
-        }
-
         stage("文章格式校验"){
+            when {
+                changeRequest target: 'master'
+            }
+
             steps{
                 script{
                     withChangeSets(){
