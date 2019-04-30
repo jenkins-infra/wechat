@@ -8,6 +8,8 @@ tags:
 - ansible
 - nginx
 author: zacker330
+shared_by:
+- DevOpsTimes
 ---
 本文介绍如何使用 Jenkins + Ansible 实现对 Nginx 的自动化部署。最终达到的效果有如下几点：
 1. 只要你将 Nginx 的配置推送到 GitHub 中，Jenkins 就会自动执行部署，然后目标服务器的 Nginx 配置自动生效。这个过程是幂等（idempotent）的，只要代码不变，执行多少遍，最终效果不变。
