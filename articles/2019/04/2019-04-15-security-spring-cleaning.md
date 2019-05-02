@@ -1,6 +1,6 @@
 ---
-layout: post
 title: 春季安全清查
+description: Jenkins 管理员们应该关注的安全问题
 tags:
 - plugins
 - security
