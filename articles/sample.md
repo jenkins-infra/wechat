@@ -4,7 +4,7 @@ description: 描述(*)
 author: 作者(*)
 translator: 译者
 original: 原文链接
-poster: 封面图片(*)
+poster: 封面图片路径(*)
 toc: 这里如果设置为 true 的话，可以生成目录
 date: 2019-02-13
 tags:
@@ -16,12 +16,20 @@ shared_by:
 - sampleAccountID 如果当前文章被其他公众号所转载，需要在这里添加对应的公众号 ID
 ---
 
-文章正文。请注意中英文标点符号，避免多余的空格、空行。
+*文章的开头，需要放置封面图片。这里只是用于说明，具体的文章中不应该有这一行。*
+![图片](../images/cow.jpg)
+
+## 文章正文
+请注意中英文标点符号，避免多余的空格、空行。
+
+## 图片
+所有的图片尽量保持在300K以内，分辨率可以大一些。
+
+## 章节
+文章的章节层级，在正文中从 `##` 开始，下面的字章节则保持递增。
 
 [Jenkins][jenkins-link-id]
 
 [Jenkins 中文社区链接](https://jenkins-zh.cn/)
-
-![图片](../images/cow.jpg)
 
 [jenkins-link-id]: https://jenkins.io/zh "Jenkins 中文网站"
