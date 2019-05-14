@@ -5,7 +5,7 @@ tags:
 - core
 - community
 author: kohsuke
-translator: raychou1203
+translator: arjenzhou
 share:
 - linuxpk
 ---
