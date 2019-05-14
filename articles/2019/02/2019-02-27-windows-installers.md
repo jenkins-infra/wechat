@@ -6,7 +6,7 @@ tags:
 - platform-sig
 - installers
 author: slide_o_mix
-translator: raychou1203
+translator: arjenzhou
 original: https://jenkins.io/blog/2019/02/01/windows-installers/
 ---
 
