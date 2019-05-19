@@ -27,7 +27,8 @@ pipeline {
                     archiveArtifacts '*'
                     def branch = "wechat-$BRANCH_NAME"
                     branch = branch.toLowerCase()
-                    build job: 'jenkins-zh/jenkins-zh/master', parameters: [string(name: 'previewUpstream', value: branch)]
+                    def prNum = "$BRANCH_NAME".replace('PR-','')
+                    build job: 'jenkins-zh/jenkins-zh/master', parameters: [string(name: 'previewUpstream', value: branch),string(name: 'previewUpstreamPR', value: prNum)]
                     pullRequest.createStatus(status: 'success',
                         context: 'continuous-integration/jenkins/pr-merge/preview',
                         description: 'Website preview',
