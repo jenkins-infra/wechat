@@ -17,6 +17,24 @@ pipeline {
                 }
             }
         }
+        stage("preview"){
+            when {
+                changeRequest target: 'master'
+            }
+
+            steps{
+                build 'jenkins-zh/jenkins-zh/master', parameters: [string(name: 'previewUpstream', value: 'wechat-$BRANCH_NAME')]
+
+                script{
+                    def branch = "wechat-$BRANCH_NAME"
+                    branch = branch.toLowerCase()
+                    pullRequest.createStatus(status: 'success',
+                        context: 'continuous-integration/jenkins/pr-merge/preview',
+                        description: 'Website preview',
+                        targetUrl: "http://" + branch + ".preview.jenkins-zh.cn")
+                }
+            }
+        }
     }
 }
 
