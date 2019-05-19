@@ -24,6 +24,7 @@ pipeline {
 
             steps{
                 script{
+                    archiveArtifacts '.'
                     def branch = "wechat-$BRANCH_NAME"
                     branch = branch.toLowerCase()
                     build job: 'jenkins-zh/jenkins-zh/master', parameters: [string(name: 'previewUpstream', value: branch)]
