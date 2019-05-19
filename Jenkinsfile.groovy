@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    options {
+        disableConcurrentBuilds()
+        quietPeriod 30
+    }
+
     stages{
         stage("文章格式校验"){
             when {
@@ -24,7 +29,6 @@ pipeline {
 
             steps{
                 script{
-                    archiveArtifacts '*'
                     def branch = "wechat-$BRANCH_NAME"
                     branch = branch.toLowerCase()
                     def prNum = "$BRANCH_NAME".replace('PR-','')
