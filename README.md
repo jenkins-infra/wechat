@@ -1,5 +1,7 @@
 # Jenkins WeChat
 
+WeChat is similar with [Twitter](https://twitter.com). Almost everyone have their own account with WeChat in China.
+
 Jenkins WeChat subscription account will deliver the messages or events from the Jenkins Community.
 
 All articles should be open-source, every contributor could create a PR. Once we reviewed it, your articles could be released.
