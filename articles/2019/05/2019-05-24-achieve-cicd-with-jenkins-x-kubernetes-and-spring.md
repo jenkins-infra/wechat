@@ -94,7 +94,7 @@ jx get activity -f okta-spring-jx-example -w
 
 运行 `jx console`，单击生成的链接，然后导航到你的项目(如果你想要一个更富视觉效果的视图)。
 
-![Image title](../05/2019-05-24-achieve-cicd-with-jenkins-x-kubernetes-and-spring/218555ae4b7cda6108cb48d15e26a7b07bae408f50b13845496a07be904ac03e.png)
+![Image title](218555ae4b7cda6108cb48d15e26a7b07bae408f50b13845496a07be904ac03e.png)
 
 
 
@@ -389,11 +389,11 @@ git push origin add-secure-app
 
 打开浏览器并导航到 GitHub 上的存储库并创建 pull request。创建后它应该如下所示。
 
-![Add Bootiful PWA Pull Request](../05/2019-05-24-achieve-cicd-with-jenkins-x-kubernetes-and-spring/3c80d152f689f7af50ba0a8064b081e873bc7d6e8fac016c310eea9d7e8f1f74.png)
+![Add Bootiful PWA Pull Request](3c80d152f689f7af50ba0a8064b081e873bc7d6e8fac016c310eea9d7e8f1f74.png)
 
 如果你的 pull request 测试通过，你应该能看到一些绿色标记和 Jenkins X 的评论，说明你的应用程序在预览环境中可用。
 
-![PR Success!](../05/2019-05-24-achieve-cicd-with-jenkins-x-kubernetes-and-spring/acae02f7777d71517ccf208eb049d285b1ad704b94d6953c6bf942b4ad060e4c.png)
+![PR Success!](acae02f7777d71517ccf208eb049d285b1ad704b94d6953c6bf942b4ad060e4c.png)
 
 如果你单击**此处**链接并尝试登录，则可能会从 Okta 得到一个错误，指出重定向 URI 尚未列入白名单。
 
@@ -515,7 +515,7 @@ dir ('./holdings-api') {
 
 提交并推送你的更改，应用程序应该更新为 http://{yourPreviewURL}/login 的重定向 URI。你需要手动为 http://{yourPreviewURL} 添加一个注销重定向 URI，  因为 [Okta 的 Java SDK 目前不支持此功能](https://github.com/okta/okta-sdk-java/issues/207)。
 
-![Okta app with URI settings](../05/2019-05-24-achieve-cicd-with-jenkins-x-kubernetes-and-spring/579246f0b88ce645e6cb1ddbc57872a05694fa8600c89a490d09458f3c966376.png)
+![Okta app with URI settings](579246f0b88ce645e6cb1ddbc57872a05694fa8600c89a490d09458f3c966376.png)
 
 要将你的 pull request 上传到演示环境，请将其合并，并将主分支推送到演示环境。不幸的是，你将无法登录。这是因为没有进程使用你的 Okta 应用程序注册登台站点的重定向 URI。如果手动添加 URI，一切都应该有效。
 
@@ -657,7 +657,7 @@ git push origin enable-e2e-tests
 3. 在 `crypto-pwa/test/protractor.conf.js` 中，我将 defaultTimeoutInterval 更改为 600000。
 第一次运行时测试可能会失败，因为未为新预览环境配置注销重定向URI。更新 Okta 应用程序的注销重定向 URI 以匹配你的 PR 的预览环境 URI，重新 pull request 测试，一切都应该通过！
 
-![blog/spring-boot-jenkins-x/jenkinsx-everything-is-awesome.png](../05/2019-05-24-achieve-cicd-with-jenkins-x-kubernetes-and-spring/4850f66b7c90bed1377a55e88f9a9d25b889059d0c11b772a8ed0803dd118683.png)
+![blog/spring-boot-jenkins-x/jenkinsx-everything-is-awesome.png](4850f66b7c90bed1377a55e88f9a9d25b889059d0c11b772a8ed0803dd118683.png)
 
 你可以在 [GitHub](https://github.com/oktadeveloper/okta-spring-jx-example) 上的此示例中找到已完成应用程序的源代码  。
 

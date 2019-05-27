@@ -11,7 +11,7 @@ author: donhui
 poster: “./2019-05-22-jacoco-coverage-for-functional-test/hangzhou.jpg”
 ---
 
-![hangzhou](./2019-05-22-jacoco-coverage-for-functional-test/hangzhou.jpg)
+![hangzhou](hangzhou.jpg)
 
 ## 使用 JaCoCo 统计功能测试代码覆盖率？
 对于 JaCoCo，有所了解但又不是很熟悉。
@@ -130,7 +130,7 @@ pipeline {
 ```
 JaCoCo 覆盖率报告，部分截图如下：
 
-![coverage-summary](./2019-05-22-jacoco-coverage-for-functional-test/coverage-summary.png)
+![coverage-summary](coverage-summary.png)
 
 ## 总结
 笔者所实现的方式并未覆盖任何场景，但是大同小异，相关工具的使用详情可以查看官网文档，因为它是最全面的。
