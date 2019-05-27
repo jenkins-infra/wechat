@@ -14,6 +14,7 @@ keywords:
 author: markewaite
 original: https://jenkins.io/blog/2019/05/11/docs-sig-announcement/
 translator: donhui
+toc: true
 poster: "./2019-05-27-docs-sig-announcement/Jenkins_Needs_You-02.png"
 ---
 
