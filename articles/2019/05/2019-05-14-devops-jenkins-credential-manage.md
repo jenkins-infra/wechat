@@ -7,10 +7,10 @@ tags:
 - jenkins
 - devops
 author: zacker330
-poster: "../../../images/articles/2019/05/2019-05-14-devops-jenkins-credential-manage/devops-platform-lock-jenkins.png"
+poster: "./2019-05-14-devops-jenkins-credential-manage/devops-platform-lock-jenkins.png"
 ---
 
-![](../../../images/articles/2019/05/2019-05-14-devops-jenkins-credential-manage/devops-platform-lock-jenkins.png)
+![](devops-platform-lock-jenkins.png)
 
 ### 背景
 了解到行业内有些团队是基于 Jenkins 开发 DevOps 平台。而基于 Jenkins 实现的 DevOps 平台，就不得不考虑凭证的管理问题。

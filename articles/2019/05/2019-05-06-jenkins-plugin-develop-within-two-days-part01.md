@@ -8,10 +8,10 @@ tags:
 - maven
 - jira
 author: donhui
-poster: "../../../images/articles/2019/05/2019-05-06-jenkins-plugin-develop-within-two-days-part01/huashan.png"
+poster: "./2019-05-06-jenkins-plugin-develop-within-two-days-part01/huashan.png"
 ---
 
-![huashan](../../../images/articles/2019/05/2019-05-06-jenkins-plugin-develop-within-two-days-part01/huashan.png)
+![huashan](huashan.png)
 
 本文介绍了笔者首个 Jenkins 插件开发的旅程，
 包括从产生 idea 开始，然后经过插件定制开发，
@@ -115,7 +115,7 @@ INFO: Jenkins is fully up and running
 
 在 Jenkins 中创建一个自由风格的任务，然后给它取个名字。
 然后添加 "Say hello world" 构建步骤，如下图所示：  
-![say hello world](../../../images/articles/2019/05/2019-05-06-jenkins-plugin-develop-within-two-days-part01/say-hello-world.png)
+![say hello world](say-hello-world.png)
 
 输入一个名字，如：Jenkins ，然后保存该任务，
 点击构建，查看构建日志，输出如下所示：
@@ -218,10 +218,10 @@ Jenkins 强大之处在于它的生态，目前有上千个插件，
   
 如果勾选了下面截图中的选择框，
 Jenkins 任务在构建时将会检查 pom.xml 中是否包含 SNAPSHOT 。
-![maven-snapshot-check-plugin-usage](../../../images/articles/2019/05/2019-05-06-jenkins-plugin-develop-within-two-days-part01/maven-snapshot-check-plugin-usage.png)
+![maven-snapshot-check-plugin-usage](maven-snapshot-check-plugin-usage.png)
 
 如果检查到的话，则会将该次构建状态标记为失败。
-![job-build-console-output](../../../images/articles/2019/05/2019-05-06-jenkins-plugin-develop-within-two-days-part01/job-build-console-output.png)
+![job-build-console-output](job-build-console-output.png)
 
 ## 总结
 文章上篇主要介绍了从产生 idea 到插件开发完成的过程。  

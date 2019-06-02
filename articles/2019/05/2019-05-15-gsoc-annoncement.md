@@ -9,7 +9,7 @@ author: linuxsuren
 poster: “../../../images/gsoc/gsoc-big-logo.jpeg”
 ---
 
-![GSoC](../../../images/gsoc/gsoc-big-logo.jpeg)
+![GSoC](../../../../images/gsoc/gsoc-big-logo.jpeg)
 
 Google Summer of Code (GSoC) 项目是一个年度性的全球化活动，该项目旨在鼓励高校学生在暑假期间参与到开源项目中来。
 

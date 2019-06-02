@@ -8,10 +8,10 @@ tags:
 - maven
 - jira
 author: donhui
-poster: ../../../images/articles/2019/05/2019-05-08-jenkins-plugin-develop-within-two-days-part02/sunset.png
+poster: "./2019-05-08-jenkins-plugin-develop-within-two-days-part02/sunset.png"
 ---
 
-![江边落日](../../../images/articles/2019/05/2019-05-08-jenkins-plugin-develop-within-two-days-part02/sunset.png)
+![江边落日](sunset.png)
 
 本文分上下两篇，上篇介绍了从产生 idea 到插件开发完成的过程；
 下篇将介绍将插件托管到 Jenkins 插件更新中心的一系列过程。
@@ -209,7 +209,7 @@ mvn release:prepare release:perform
 在插件列表页的地址为：[https://plugins.jenkins.io/maven-snapshot-check](https://plugins.jenkins.io/maven-snapshot-check) 。
 
 Jenkins 实例的插件管理页面的「可选插件」选项截图如下：
-![maven-snapshot-check-available](../../../images/articles/2019/05/2019-05-08-jenkins-plugin-develop-within-two-days-part02/maven-snapshot-check-available.png)
+![maven-snapshot-check-available](maven-snapshot-check-available.png)
 
 ### 为插件分类
 在 Jenkins [插件列表页面](https://plugins.jenkins.io/)，可以对插件进行分类显示。

@@ -8,10 +8,10 @@ tags:
 - ansible
 - springboot
 author: zacker330
-poster: "../../../images/articles/2019/05/2019-05-20-jenkins-ansible-springboot/poster.png"
+poster: "./2019-05-20-jenkins-ansible-springboot/poster.png"
 ---
 
-![image.png](../../../images/articles/2019/05/2019-05-20-jenkins-ansible-springboot/poster.png)
+![image.png](poster.png)
 
 
 本文要点：
@@ -60,7 +60,7 @@ poster: "../../../images/articles/2019/05/2019-05-20-jenkins-ansible-springboot/
 
 实验环境近期的总体结构图如下：
 
-![实验环境近期的总体结构](../../../images/articles/2019/05/2019-05-20-jenkins-ansible-springboot/architecture.png)
+![实验环境近期的总体结构](architecture.png)
 
 之所以说是“近期的”，是因为上图与本篇介绍的结构有小差异。本篇文章还没有介绍 Nginx 与 Springboot 配置共用，但是总体不影响读者理解。
 
@@ -186,7 +186,7 @@ end
 
 网络结构可以总结为下图：
 
-![image.png](../../../images/articles/2019/05/2019-05-20-jenkins-ansible-springboot/network.png)
+![image.png](network.png)
 
 ## 后记
 目前遗留问题：
