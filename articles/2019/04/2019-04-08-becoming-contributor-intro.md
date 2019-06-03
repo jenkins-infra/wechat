@@ -36,7 +36,7 @@ original: https://jenkins.io/blog/2019/03/29/becoming-contributor-intro/
 
 在这个页面中列举了我们能够参与 Jenkins 项目和社区的许多方式。尽管它展示了所有可能的选项供读者选择，但一下子看上去令人有些无所适从。
 
-![image.png](../../../images/articles/2019/04/2019-04-08-becoming-contributor/jenkins-participate-page.png)
+![image.png](jenkins-participate-page.png)
 
 这个页面被分成了左右两个部分，左边提供了参与社区的方法，右边是向社区贡献的方法。
 
@@ -79,7 +79,7 @@ original: https://jenkins.io/blog/2019/03/29/becoming-contributor-intro/
 通过阅读贡献指南，我了解了 Awestruct 静态站点生成器，它是用于将代码仓库中的 AsciiDoc 源文件转换为网页的工具。
 然而，当我点击链接想查看更多信息时，我发现这个链接失效了——域名已经过期。
 
-![image.png](../../../images/articles/2019/04/2019-04-08-becoming-contributor/awestruct-site.png)
+![image.png](awestruct-site.png)
 
 
 ### 为何不修复它?
@@ -94,7 +94,7 @@ original: https://jenkins.io/blog/2019/03/29/becoming-contributor-intro/
 
 下一步就是对相应文件进行修改。我创建了一个新的分支 “alternative-awestruct-link” 并对它作了如下修改：
 
-![image.png](../../../images/articles/2019/04/2019-04-08-becoming-contributor/making-change.png)
+![image.png](making-change.png)
 
 #### 确保构建正确并且通过测试
 
@@ -103,7 +103,7 @@ original: https://jenkins.io/blog/2019/03/29/becoming-contributor-intro/
 
 如贡献指南所述，要构建此项目，我们只需在代码仓库的根目录中以默认的 “make” 作为 target 来运行构建命令。
 
-![image.png](../../../images/articles/2019/04/2019-04-08-becoming-contributor/executing-make.png)
+![image.png](executing-make.png)
 
 一旦命令执行完成，如果没有出现报错，我们就可以进行下一步：创建 Pull Request
 
@@ -115,18 +115,18 @@ original: https://jenkins.io/blog/2019/03/29/becoming-contributor-intro/
 
 这次我直接点击了链接，它将我跳转到 Github 的创建 PR 页面，我在这个页面上添加描述并创建了 PR。
 
-![image.png](../../../images/articles/2019/04/2019-04-08-becoming-contributor/creating-pr.png)
+![image.png](creating-pr.png)
 
 当创建这个代码仓库的 PR 后，可以发现有一些检查开始运行。Jenkins 代码仓库配置了 [“Jenkins on Jenkins”](https://ci.jenkins.io/)，
 它会为每个代码仓库运行 [Jenkinsfile](https://github.com/jenkins-infra/jenkins.io/blob/master/Jenkinsfile) 中描述的相应 CI 流水线。
 
 检查结束后，可以在 PR 中看到结果：
 
-![image.png](../../../images/articles/2019/04/2019-04-08-becoming-contributor/pr-created-passing.png)
+![image.png](pr-created-passing.png)
 
 如果想看到执行的细节，可以点击 “Show all checks” 链接：
 
-![image.png](../../../images/articles/2019/04/2019-04-08-becoming-contributor/pr-checks-jenkins.png)
+![image.png](pr-checks-jenkins.png)
 
 #### PR review
 
@@ -134,7 +134,7 @@ original: https://jenkins.io/blog/2019/03/29/becoming-contributor-intro/
 
 一旦 PR 被审核通过然后被 merge，你的贡献就会被整合到代码仓库的主分支并成为下次版本更新的一部分。
 
-![image.png](../../../images/articles/2019/04/2019-04-08-becoming-contributor/pr-merged.png)
+![image.png](pr-merged.png)
 
 ### 我已经作出了贡献!
 

@@ -13,7 +13,7 @@ author: zacker330
 
 下图为整体架构图：
 
-![](../../../images/articles/2019/04/2019-04-15-zabbix-monitor-jenkins/292372-ecc7d290dd4d0f0f.png)
+![](292372-ecc7d290dd4d0f0f.png)
 
 整体并不复杂，大体步骤如下：
 
@@ -26,13 +26,13 @@ author: zacker330
 
 ## 1. 使 Jenkins 暴露 metrics api
 安装 Metrics 插件，在系统配置中，会多出“Metrics”的配置，如下图：
-![](../../../images/articles/2019/04/2019-04-15-zabbix-monitor-jenkins/292372-ba867bb2509c6fc4.png)
+![](292372-ba867bb2509c6fc4.png)
 
 配置项不复杂。我们需要点击“Generate...”生成一个 Access Key（生成后，记得要保存）。这个 Key 用于身份校验，后面我们会用到。
 
 保存后，我们在浏览器中输入URL：`http://localhost:8080/metrics/<刚生成的 Access Key>` 验证 Jenkins 是否已经暴露 metrics。如果看到如下图，就说明可以进行下一步了。
 
-![](../../../images/articles/2019/04/2019-04-15-zabbix-monitor-jenkins/292372-011d7fc64d176d63.png)
+![](292372-011d7fc64d176d63.png)
 
 ### 1.1 Metrics 插件介绍
 Metrics 插件是基于 dropwizard/metrics 实现。它通过4个接口暴露指标数据：/metrics，/ping，/threads，/healthcheck。
@@ -62,7 +62,7 @@ Metrics 插件是基于 dropwizard/metrics 实现。它通过4个接口暴露指
 
 ### 1.2 Metrics 插件其它接口介绍
 * /ping：接口返回 `pong` 代表 Jenkins 存活，如下图：
-  ![](../../../images/articles/2019/04/2019-04-15-zabbix-monitor-jenkins/292372-15e36249b868625a.png)
+  ![](292372-15e36249b868625a.png)
 * /threads：返回 Jenkins 的线程信息
 * /healthcheck：返回以下指标：
 
@@ -93,13 +93,13 @@ Zabbix server 通过与 Zabbix agent 进行通信实现数据的采集。而 Zab
 
 ### 2.1 配置 Zabbix server 如何从 agent 获取指标数据
 首先，我们需要告诉 Zabbix server 要与哪些 Zabbix agent 通信。所以，第一步是创建主机，如下图：
-  ![](../../../images/articles/2019/04/2019-04-15-zabbix-monitor-jenkins/292372-82ae4d1864e7abc7.png)
+  ![](292372-82ae4d1864e7abc7.png)
 第二步，在主机列表中点击“Iterms”进行该主机的监控项设置：
-  ![](../../../images/articles/2019/04/2019-04-15-zabbix-monitor-jenkins/292372-6903c525459cb7a6.png)
+  ![](292372-6903c525459cb7a6.png)
 第三步，进入创建监控项页面：
-  ![](../../../images/articles/2019/04/2019-04-15-zabbix-monitor-jenkins/292372-a6ab0ea028cbadb0.png)
+  ![](292372-a6ab0ea028cbadb0.png)
 第四步，创建监控项：
-  ![](../../../images/articles/2019/04/2019-04-15-zabbix-monitor-jenkins/292372-47570ec3796d857a.png)
+  ![](292372-47570ec3796d857a.png)
   
 
 这里需要解释其中几个选项为什么要那样填：
@@ -151,14 +151,14 @@ jenkins.metrics.py 脚本之所以对 JSON 数据进行扁平化，是因为 Zab
 
 在经过 2.2 节的配置后，如果 Zabbix server 采集到数据，可通过_Monitoring -> Latest data -> Graph_菜单（如下图），看到图形化的报表：
 
-![](../../../images/articles/2019/04/2019-04-15-zabbix-monitor-jenkins/292372-e46c6e7f12c1716a.png)
+![](292372-e46c6e7f12c1716a.png)
 
 图形化的报表：
-![](../../../images/articles/2019/04/2019-04-15-zabbix-monitor-jenkins/292372-7ad0297b73be9bbb.png)
+![](292372-7ad0297b73be9bbb.png)
 
 有了指标数据就可以根据它进行告警了。告警在 Zabbix 中称为触发器（trigger）。如下图，我们创建了一个当 Jenkins node 小于 2 时，就触发告警的触发器：
 
-![](../../../images/articles/2019/04/2019-04-15-zabbix-monitor-jenkins/292372-dcb88e44931b70fa.png)
+![](292372-dcb88e44931b70fa.png)
 
 至于最终触发器的后续行为是发邮件，还是发短信，属于细节部分，读者朋友可根据自己的情况进行设置。
 

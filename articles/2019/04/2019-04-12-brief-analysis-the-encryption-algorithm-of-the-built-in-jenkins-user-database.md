@@ -11,7 +11,7 @@ author: donhui
 Jenkins 访问控制分为：安全域（即认证）与授权策略。
 
 其中，安全域可以采用三种形式，分别为：Jenkins 专有用户数据库、LDAP、Servlet 容器代理。
-![jenkins-security-realm.png](../../../images/articles/2019/04/2019-04-12-brief-analysis-the-encryption-algorithm-of-the-built-in-jenkins-user-database/jenkins-security-realm.png)
+![jenkins-security-realm.png](jenkins-security-realm.png)
 
 ### 在哪里看到加密后的用户密码信息？
 Jenkins 专有用户的数据信息存放位置：$JENKINS_HOME/users/
@@ -19,7 +19,7 @@ Jenkins 专有用户的数据信息存放位置：$JENKINS_HOME/users/
 每个用户的相关信息存放在各自的 config.xml 文件中： $JENKINS_HOME/users/$user/config.xml
 
 在 config.xml 文件中的 passwordHash 节点可以看到用户密码加密后的密文哈希值：
-![jenkins-user-config.png](../../../images/articles/2019/04/2019-04-12-brief-analysis-the-encryption-algorithm-of-the-built-in-jenkins-user-database/jenkins-user-config.png)
+![jenkins-user-config.png](jenkins-user-config.png)
 
 ### 用户密码是用什么算法加密的呢？
 那么问题来了，用户密码是用何种加密方式加密的呢？可否通过解密密文得到明文呢？

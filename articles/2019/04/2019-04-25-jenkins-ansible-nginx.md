@@ -18,7 +18,7 @@ author: zacker330
 本次实验使用 Docker Compose 搭建 Jenkins 及 Jenkins agent。使用 Vagrant 启动一台虚拟机，用于部署 Nginx。使用 Vagrant 是可选的，读者可以使用 VirtualBox 启动一个虚拟机。使用 Vagrant 完全是为了自动化搭建实验环境。
 
 以下是整个实验环境的架构图：
-![Jenkins Ansible Nginx](../../../images/articles/2019/04/2019-04-25-jenkins-ansible-nginx/pc1.png)
+![Jenkins Ansible Nginx](pc1.png)
 
 注意，图中的 `5123 <-> 80` 代表将宿主机的 5123 端口请求转发到虚拟机中的 80 端口。
 
@@ -44,7 +44,7 @@ author: zacker330
     docker-compose up -d
     ```
    通过 `http://localhost:8080` 访问 Jenkins master，如果出现“解锁密码”页面，如下图，则执行命令 `docker-compose logs jenkins` 查看 Jenkins master 启动日志。将日志中的解锁密码输入到表单中。然后就一步步按提示安装即可。
-    ![解锁Jenkins](../../../images/articles/2019/04/2019-04-25-jenkins-ansible-nginx/pc2.png)
+    ![解锁Jenkins](pc2.png)
 4. 安装 Jenkins 插件
     本次实验需要安装以下插件：
     * Pipeline 2.6：[https://plugins.jenkins.io/workflow-aggregator](https://plugins.jenkins.io/workflow-aggregator)
@@ -53,11 +53,11 @@ author: zacker330
     * Git 3.9.3：[https://plugins.jenkins.io/git](https://plugins.jenkins.io/git)
 5. 配置 Jenkins master 不执行任务
     进入页面：[http://localhost:8080/computer/(master)/configure](http://localhost:8080/computer/(master)/configure)，如下图所示设置：
-![image.png](../../../images/articles/2019/04/2019-04-25-jenkins-ansible-nginx/pc9.png)
+![image.png](pc9.png)
 
 6. 确认 Jenkins 安全配置有打开端口，以供 Jenkins agent 连接。
     我们设置 Jenkins master 开放的端口，端口可以是固定的 50000 ，也可以设置为随机。设置链接：[http://localhost:8080/configureSecurity/](http://localhost:8080/configureSecurity/)。
-    ![image.png](../../../images/articles/2019/04/2019-04-25-jenkins-ansible-nginx/pc3.png)
+    ![image.png](pc3.png)
 
 7. 启动目标机器，用于部署 Nginx
     在命令行中执行以下命令：
@@ -70,22 +70,22 @@ author: zacker330
 
 ## 3. 在 Jenkins 上创建部署任务
 1. 新建流水线任务
-    ![新建流水线任务](../../../images/articles/2019/04/2019-04-25-jenkins-ansible-nginx/pc4.png)
+    ![新建流水线任务](pc4.png)
 2. 配置流水线
     配置 Jenkins 任务从远程仓库拉取 Jenkinsfile，如下图所示：
-    ![配置流水线](../../../images/articles/2019/04/2019-04-25-jenkins-ansible-nginx/pc5.png)
+    ![配置流水线](pc5.png)
     除此之外，不需要其它配置了，是不是很简单？
 ## 4. 手工触发一次自动化构建
   点击“立即构建”：
-  ![image.png](../../../images/articles/2019/04/2019-04-25-jenkins-ansible-nginx/pc6.png)
+  ![image.png](pc6.png)
   最终执行日志如下：
-  ![部署日志](../../../images/articles/2019/04/2019-04-25-jenkins-ansible-nginx/pc7.png)
+  ![部署日志](pc7.png)
 
 至此，部署已经完成。以后修改 Nginx 的配置，只需要修改代码，然后推送到远程仓库，就会自动化部署。不需要手工登录到目标机器手工修改了。
 
 最后，我们可以通过访问 `http://localhost:5123`，如果出现如下页面说明部署成功：
 
-![部署成功](../../../images/articles/2019/04/2019-04-25-jenkins-ansible-nginx/pc8.png)
+![部署成功](pc8.png)
 
 ## 5. 代码讲解
 以上步骤并不能看出自动化部署真正做了什么。那是因为我们所有的逻辑都写在代码中。是的，可以说是 **everything is code**。
@@ -186,7 +186,7 @@ pipeline{
 
 如果觉得本文讲的 Jenkins 流水线逻辑部分不够过瘾，可以考虑入手一本最近才出版的《Jenkins 2.x实践指南》。长按下图进行扫码购买。
 
-![](../../../images/articles/2019/04/2019-04-25-jenkins-ansible-nginx/jenkins-2x-in-practice.jpeg)
+![](jenkins-2x-in-practice.jpeg)
 
 
 

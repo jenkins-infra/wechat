@@ -13,7 +13,7 @@ original: https://dzone.com/articles/what-is-cicd
 CI/CD 的出现改变了开发人员和测试人员发布软件的方式。本文是描述这一变化的系列文章第一篇，
 这些文章将提供各种工具和流程的讲解，以帮助开发人员更好的使用 CI/CD。
 
-![pipeline.png](../../../images/articles/2019/04/2019-04-12-what-is-cicd/pic1.png)
+![pipeline.png](pic1.png)
 
 从最初的 [瀑布模型](https://en.wikipedia.org/wiki/Waterfall_model)，
 到后来的 [敏捷开发](https://en.wikipedia.org/wiki/Agile_software_development)，
@@ -46,7 +46,7 @@ CI/CD 的出现改变了开发人员和测试人员发布软件的方式。本�
 部署流水线对这一过程进行建模，并且它的持续集成和发布管理工具能让您在代码从版本控制转移到各种测试和部署时，
 查看和控制每次更改的过程。」
 
-![pipeline.png](../../../images/articles/2019/04/2019-04-12-what-is-cicd/pic2.png)
+![pipeline.png](pic2.png)
 
 ## 持续集成（CI）
 
@@ -81,7 +81,7 @@ CD 集中依赖于部署流水线，团队通过流水线自动化测试和部�
 AWS 上提供了可靠的当前 CI/CD 的展示，亚马逊是云计算的提供商之一，提供出色的 CI/CD 流水线环境和实验过程，
 有众多开发资源可供选择，您可以将它们在一个易于配置和监控的流水线中组合起来。
 
-![pipeline.png](../../../images/articles/2019/04/2019-04-12-what-is-cicd/pic3.png)
+![pipeline.png](pic3.png)
 
 许多人认为持续交付的吸引力主要在于，它自动化了从提交代码到仓库，再到测试和发布产品过程的所有步骤。
 这是构建和测试过程细致的自动化，但是如何发布以及发布什么仍然是需要人工操作，持续部署可以改变这一点。
@@ -110,9 +110,9 @@ Cloudbees 甚至聘请了 Jenkins 的创始人，并提供了一些 Jenkins 培�
 因此，我们正在寻找与 GSP 兼容或者最好是已经集成进 GSO 的产品。我们尝试过 CircleCI，Codeship 和 Shippable，
 下面有一个简单的表格，展示了每个工具的一些细节：
 
-![pipeline.png](../../../images/articles/2019/04/2019-04-12-what-is-cicd/pic4.png)
+![pipeline.png](pic4.png)
 
-![pipeline.png](../../../images/articles/2019/04/2019-04-12-what-is-cicd/pic5.png)
+![pipeline.png](pic5.png)
 
 我们最终选择了 [Codeship](http://codeship.com/)，我认为我们的选择是正确的，
 也感谢 Codeship 团队的支持。

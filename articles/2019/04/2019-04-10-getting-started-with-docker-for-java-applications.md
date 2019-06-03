@@ -28,7 +28,7 @@ Docker 已经非常出名并且更多的组织正在转向基于 Docker 的应�
 
 这里是可用于以上步骤的 Jenkins 流水线代码：
 
-![pipeline.png](../../../images/articles/2019/04/2019-04-10-getting-started-with-docker-for-java-applications/pipeline.png)
+![pipeline.png](pipeline.png)
 
 ```yaml
 node {
@@ -66,7 +66,7 @@ step 3 'bake image'
 docker.withRegistry('https://registry.hub.docker.com','docker-hub-credentials')
 ```
 
-![docker-hub-credentials.png](../../../images/articles/2019/04/2019-04-10-getting-started-with-docker-for-java-applications/docker-hub-credentials.png)
+![docker-hub-credentials.png](docker-hub-credentials.png)
 
 这个步骤构建 Docker 镜像。Docker build 命令将 dockerhub 仓库名称和 tag 名称作为一个参数，而构建位置作为另一个参数。
 
@@ -97,7 +97,7 @@ withRun 步骤用来帮你运行你刚才构建的 Docker 镜像并暴露应用�
 
 最后一步是推送该镜像到一个 dockerhub registry 或者你的组织建立的任何内部 registry 。
 
-![docker-hub.png](../../../images/articles/2019/04/2019-04-10-getting-started-with-docker-for-java-applications/docker-hub.png)
+![docker-hub.png](docker-hub.png)
 
 ```yaml
 stage('Results') {

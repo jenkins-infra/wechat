@@ -18,7 +18,7 @@ original: https://blog.csanchez.org/2019/01/24/progressive-delivery-with-jenkins
 
 这是渐进式交付系列的第二篇文章，第一篇请看：[Kubernetes 中的渐进式交付：蓝绿部署和金丝雀部署](https://blog.csanchez.org/2019/01/22/progressive-delivery-in-kubernetes-blue-green-and-canary-deployments/)。
 
-![kubernetes.png](../../../images/articles/2019/04/2019-04-26-progressive-delivery-with-jenkins-x/kubernetes.png)
+![kubernetes.png](kubernetes.png)
 
 我使用的我的 [Croc Hunter 示例项目](https://github.com/carlossg/croc-hunter-jenkinsx-serverless)评估了 Jenkins X 中金丝雀部署和蓝绿色部署的三种渐进式交付方案。
 - Shipper 为 Jenkins X 构建的 Helm 图表启用了蓝绿部署和多集群部署，但是对图表的内容有限制。

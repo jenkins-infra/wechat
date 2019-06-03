@@ -18,7 +18,7 @@ original: https://blog.csanchez.org/2019/01/22/progressive-delivery-in-kubernete
 它将新版本部署到用户的一个子集，并在将其滚动到全部用户之前对其正确性和性能进行评估，
 如果不匹配某些关键指标，则进行回滚。
 
-![](../../../images/articles/2019/04/2019-04-24-progressive-delivery-in-kubernetes-blue-green-and-canary-deployments/kubernetes.png)
+![](kubernetes.png)
 
 这里有一些有趣的项目，使得渐进式交付在 Kubernetes 中变得更简单。
 我将使用一个 [Jenkins X 示例项目](https://github.com/carlossg/croc-hunter-jenkinsx-serverless)
@@ -160,7 +160,7 @@ Flager 需要将 [Istio与 Prometheus、Servicegraph](https://docs.flagger.app/i
 另外还要[安装 Flager 控制器](https://docs.flagger.app/install/install-flagger)本身。
 它也提供了一个 [Grfana 面板](https://docs.flagger.app/install/install-grafana)来监控部署进度。
 
-![grafana-canary-analysis.png](../../../images/articles/2019/04/2019-04-24-progressive-delivery-in-kubernetes-blue-green-and-canary-deployments/grafana-canary-analysis.png)
+![grafana-canary-analysis.png](grafana-canary-analysis.png)
 
 [部署 rollout ](https://docs.flagger.app/usage/progressive-delivery)通过 Canary 对象定义，
 它会生成主要的和金丝雀 Deployment 对象。

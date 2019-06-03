@@ -24,7 +24,7 @@ original: https://dzone.com/articles/progressive-delivery-with-jenkins-x-automat
 金丝雀发布包括向应用程序的新版本发送一小部分流量，并在向其他用户发布之前验证这里没有错误。
 Facebook 就是这样做的，首先向内部员工提供新版本，然后是一小部分用户，然后是其他所有用户，但是你要采用它并不需要成为 Facebook ！
 
-![facebook_canary_chart_1.jpeg](../../../images/articles/2019/04/2019-04-29-progressive-delivery-with-jenkins-x-automatic-cana/facebook_canary_chart_1.jpeg)
+![facebook_canary_chart_1.jpeg](facebook_canary_chart_1.jpeg)
 
 你可以[在 Martin Fowler 的网站阅读更多与金丝雀发布相关信息](https://martinfowler.com/bliki/CanaryRelease.html)。
 
@@ -54,11 +54,11 @@ Istio ingress 提供了金丝雀发布需要的路由能力（流量转移），
 集群被配置后，是时候配置我们的应用了。
 在 `charts/myapp/templates` 目录下向你的 helm chart 添加一个 [canary.yaml](https://github.com/carlossg/croc-hunter-jenkinsx-serverless/blob/9eea262/charts/croc-hunter-jenkinsx/templates/canary.yaml)。
 
-![canary_yaml2.png](../../../images/articles/2019/04/2019-04-29-progressive-delivery-with-jenkins-x-automatic-cana/canary_yaml2.png)
+![canary_yaml2.png](canary_yaml2.png)
 
 然后往 `charts/myapp/values.yaml` 追加如下内容，将 `myapp.example.com` 修改为你的主机名或域名：
 
-![values_yaml_0.png](../../../images/articles/2019/04/2019-04-29-progressive-delivery-with-jenkins-x-automatic-cana/values_yaml_0.png)
+![values_yaml_0.png](values_yaml_0.png)
 
 不久，当你从 Jenkins X 快速开始创建你的应用，将不再需要修改 `canary.yaml` 和 `values.yaml` 这两个文件，因为它们默认启用金丝雀部署。
 
@@ -98,7 +98,7 @@ Istio ingress 提供了金丝雀发布需要的路由能力（流量转移），
 
 它将为我们提供当前版本和新版本的对比视图，视图中包含不同指标（CPU，内存，请求持续时间，响应错误……）。
 
-![canary_analysis.png](../../../images/articles/2019/04/2019-04-29-progressive-delivery-with-jenkins-x-automatic-cana/canary_analysis.png)
+![canary_analysis.png](canary_analysis.png)
 
 ## 附加说明
 请注意 Istio 默认地将阻止从你的 Pod 访问外部集群（一种预计将在 Istio 1.1 中发生变化的行为）。

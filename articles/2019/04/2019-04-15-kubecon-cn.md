@@ -11,7 +11,7 @@ tags:
 author: runzexia
 ---
 
-![kubecon.png](../../../images/articles/2019/04/2019-04-15-kubecon-cn/kubecon.png)
+![kubecon.png](kubecon.png)
 
 
 ### KubeCon + CloudNativeCon | Open Source Summit | 持续交付峰会 中国2019
