@@ -10,7 +10,7 @@ author: kohsuke
 translator: linuxsuren
 ---
 
-![CDF](../../../images/logos/cdf-logo.png)
+![CDF](../../../images/cdf/cdf-logo.png)
 
 今天[Linux 基金会](https://www.linuxfoundation.org/)与 [CloudBees](https://www.cloudbees.com/)、[Google](https://about.google/) 和[一些其他公司](https://cd.foundation/members/)启动了一个新的开源软件基金会，也就是[持续交付基金会](http://cd.foundation/)(CDF). CDF 相信持续交付的力量，它旨在培养与支持开源生态，以及厂商中立的项目。
 

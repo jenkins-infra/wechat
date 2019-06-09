@@ -54,11 +54,11 @@ MPL 中还有许多其他功能，但本质上它是一个解决 DevOps 一般�
 
 MPL 允许用户使用库的核心特性（结构，模块，管道）并创建嵌套库以满足特定 DevOps 团队的需求。DevOps 团队可以在他们的项目中使用任何自定义的逻辑来组装一条完整的流水线。他们还可以通过多种方式覆盖和继承核心 MPL 模块，或者轻松地与其他团队分享自定义模块。接下来的信息，展示了这些模块的适用范围：
 
-![image.png](../../../images/articles/2019/03/2019-01-08-mpl-modular-pipeline-library/fig01-layers-of-the-mpl.png)
+![image.png](fig01-layers-of-the-mpl.png)
 
 你还可以在模块中指定某些流水线所需的后续步骤。例如，动态部署模块的执行会创建测试环境，当流水线结束时，它又会销毁该测试环境。想要仔细查看 MPL 调用过程，请查看下图：
 
-![image.png](../../../images/articles/2019/03/2019-01-08-mpl-modular-pipeline-library/fig02-the-mpl-process.png)
+![image.png](fig02-the-mpl-process.png)
 
 此图显示了 MPL 的执行。首先，你必须创建一个 Jenkins 任务，它将调用 Jenkinsfile（例如，当源代码被更改时），之后 Jenkinsfile 将调用流水线。流水线逻辑可以被定义在这些位置：MPL 端、Jenkins 任务的流水线脚本中 、嵌套库或项目 Jenkinsfile 中。最后，流水线的各个阶段将调用模块，而这些模块所使用的特性，可能来自 groovy 逻辑，流水线步骤或者共享库中的步骤。
 
@@ -91,7 +91,7 @@ MPLPipeline {}
 MPL 的主要阶段只有一步，即 [MPLModule](https://github.com/griddynamics/mpl/blob/master/vars/MPLModule.groovy#L29)。此步骤包含 MPL 的核心特性：执行包含流水线逻辑的模块。你可以在 MPL 代码仓库中找到默认模块，这些模块位于 resources/com/griddynamics/devops/mpl/modules 目录中，包括：Checkout，Build，Deploy 和 Test 模块。在每个模块的目录中，我们都可以找到真正执行相应阶段逻辑的 Groovy 文件。下图是简化了的 MPL 代码仓库结构图：
 
 
-![image.png](../../../images/articles/2019/03/2019-01-08-mpl-modular-pipeline-library/fig03-a-simplified-mpl-repository-structure.png)
+![image.png](fig03-a-simplified-mpl-repository-structure.png)
 
 检出阶段启动时，MPLModule 按名称加载模块（默认为阶段名称），并运行 Checkout/Checkout.groovy 文件中的逻辑：
 
@@ -158,11 +158,11 @@ Loading shared library mpl with version snapshot
 
 在大型公司中，支持一个大型库是没有意义的。每个部门都需要多个（不同于标准的）配置选项，并针对标准流水线进行调整，这会带来不必要的工作量。MPL 通过引入嵌套库来解决这些问题。下图展示了使用嵌套库与仅仅使用主库的区别：
 
-![image.png](../../../images/articles/2019/03/2019-01-08-mpl-modular-pipeline-library/fig04-ways-to-use-the-mpl.png)
+![image.png](fig04-ways-to-use-the-mpl.png)
 
 嵌套库与共享库相同，都通过导入 MPL 使用其特性，模块和流水线。此外，它允许将一些与团队相关的逻辑与公司的通用逻辑分离。以下是具有嵌套库的 MPL 的结构：
 
-![image.png](../../../images/articles/2019/03/2019-01-08-mpl-modular-pipeline-library/fig05-example-of-a-companys-libraries-tree-structure.png)
+![image.png](fig05-example-of-a-companys-libraries-tree-structure.png)
 
 你可以在重写的流水线中导入 MPL，指定一些附加模块的路径，覆盖模块逻辑，并由 Jenkins 负责协调（译注：此处原文是You can import the MPL in the overridden pipeline, specify the path of some additional modules, override module
 logic, and use Jenkins power moves: there are no limitations. 本人能力有限，无法真正理解作者的意思）。当另一个团队需要你的模块时，你只需向公司 MPL 基础仓库提交变更请求，如果变更请求通过，就可以与他们共享你的功能模块。
@@ -176,11 +176,11 @@ logic, and use Jenkins power moves: there are no limitations. 本人能力有限
 进一步了解嵌套库和项目端模块后，我们知道，模块名称是可以与上层库中模块名同名的。这是覆盖上层模块逻辑的好方法——使用自己的模块替换
 Build/Build.groovy——真正执行时就会执行你的模块中的逻辑，而不是上层模块的。下图说明了模块覆盖是如何工作的：
 
-![image.png](../../../images/articles/2019/03/2019-01-08-mpl-modular-pipeline-library/fig06-mpl-modules-overriding.png)
+![image.png](fig06-mpl-modules-overriding.png)
 
 更棒的是，MPL 的优点之一是你仍然可以使用上层模块！MPL 具有防止循环调用的机制，因此同一运行分支中不会再次运行同一模块。但是，你可以轻松地通过在一个模块中调用原始模块来使用上层逻辑。
 
-![image.png](../../../images/articles/2019/03/2019-01-08-mpl-modular-pipeline-library/fig07-petclinic-selenium-example-pipeline-structure.png)
+![image.png](fig07-petclinic-selenium-example-pipeline-structure.png)
 
 上面的 Petclinic-Selenium 示例中，使用了默认值 MPLPipeline（您可以在 [MPL Wiki](https://github.com/griddynamics/mpl/wiki) 页面上找到它），并在 .jenkins 目录中包含项目级别模块。这些模块将在库模块之前调用。例如，Checkout 模块没有放在项目级别，因此它将从 MPL 调用，但 Build 模块存在于 .jenkins 项目端的目录中，它将被调用：
 
