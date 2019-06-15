@@ -1,7 +1,7 @@
 ---
 title: "30分钟搞定 Jenkins CI"
 description: "设置新的 Jenkins CI，以便可以开始测试新的 Jenkins 插件"
-date: 2019-06-15
+date: 2019-06-14
 tags:
 - jenkins
 - ci
