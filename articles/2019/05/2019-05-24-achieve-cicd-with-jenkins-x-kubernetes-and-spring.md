@@ -24,9 +24,12 @@ poster: "../05/2019-05-24-achieve-cicd-with-jenkins-x-kubernetes-and-spring/cicd
 在技术上，高性能团队几乎总是成功的必要条件，而持续集成、持续部署(CI/CD)、小迭代以及快速反馈是构建模块。为你的云原生应用程序设置 CI/CD 可能比较困难。通过自动化所有内容，开发人员可以花费宝贵的时间来交付实际的业务。
 
 如何使用容器、持续交付和 Kubernetes 成为高效团队？这就是 Jenkins X 的切入点。
+
 --------
 “Jenkins X 的理念是为所有开发人员提供他们自己的海军航海管家，可以帮助你航行持续交付的海洋。” -  James Strachan
+
 --------
+
 Jenkins X 帮助你自动化你在 Kubernetes 中的 CI/CD - 你甚至不需要学习 Docker 或 Kubernetes！
 
 ## Jenkins X 能做什么？
