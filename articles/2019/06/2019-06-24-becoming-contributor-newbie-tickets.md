@@ -19,9 +19,9 @@ image: /images/post-images/2019-05-30-becoming-contributor/pr-merged.png
 
 现在，我们将会在这篇文章中探索更多高级的贡献，向 Jenkins 核心中提交代码。
 
-== 从工单和过程开始
+## 从工单和过程开始
 
-=== 新手贡献指导以及 Jenkins Jira
+### 新手贡献指导以及 Jenkins Jira
 
 查看位于 jenins.io 上的[开发者章节](https://jenkins.io/doc/developer/)可能是最好的起点，
 参考链接也很方便。同时，[向 Jenkins 贡献的新手指导](https://wiki.jenkins.io/display/JENKINS/Beginners+Guide+to+Contributing)也很有用，因为它指出了不同的仓库、工具（例如问题跟踪系统）以及治理文档。
@@ -35,13 +35,13 @@ image: /images/post-images/2019-05-30-becoming-contributor/pr-merged.png
 
 ![list-newbie-tickets](list-newbie-tickets.png)
 
-=== 选择一个工单
+### 选择一个工单
 
 在我案例中，我花了一些时间来浏览带 `newbie-friendly` 标签的工单，直到[发现了一个](https://issues.jenkins-ci.org/browse/JENKINS-56477)我似乎感兴趣并看起来有能力修复的：
 
 !(jenkins-newbie-jira-ticket-selected)[jenkins-newbie-jira-ticket-selected.png]
 
-=== 过程
+### 过程
 
 在这个阶段，当我们准备接手这个工单时，最好让社区中的其他人知道我们正在开始解决它。我们可以很容易做到这一点，
 只要把工单分配给我们自己即可（查看工单概览下的 “_Assign_” 按钮）。
@@ -55,9 +55,9 @@ image: /images/post-images/2019-05-30-becoming-contributor/pr-merged.png
 当我们马上就要开始工作时，推荐的做法是先点击"_Start Progress_"按钮。这个动作，会把状态修改为“_In progress_”，对社区而言，
 意味着我们正在处理这个工单。
 
-== 在我们的电脑设置必要的工具
+## 在我们的电脑设置必要的工具
 
-=== 配置，安装和测试
+### 配置，安装和测试
 
 正如在[该旅程的第一篇文章](https://jenkins.io/blog/2019/03/29/becoming-contributor-intro/)中描述的，开始为某个仓库做贡献的第一步
 是首先派生到我们自己的 GitHub 账号下，然后，克隆到你的电脑上。
@@ -67,16 +67,16 @@ image: /images/post-images/2019-05-30-becoming-contributor/pr-merged.png
 
 当安装并配置好所需要的工具后，我们就准备好了[在本地构建 Jenkins](https://github.com/jenkinsci/jenkins/blob/master/CONTRIBUTING.md#building-and-debugging)，也可以[运行测试](https://github.com/jenkinsci/jenkins/blob/master/CONTRIBUTING.md#testing-changes)。
 
-== 开始干活
+## 开始干活
 
-=== 复查工单细节
+### 复查工单细节
 
 现在，我准备好开始处理工单了，我必须仔细查看细节，以便全面地理解问题所在。
 
 我计划处理的工单的描述中有两个链接。第一个是，[体现真正缺陷的截图](https://github.com/jenkinsci/jenkins/pull/3715#issuecomment-470873111)。它展示出当点击按钮"_所有_"时，几个不兼容的插件是如何被选中的，甚至尽管预期的行为是仅选中兼容的插件。
 第二个链接是[代码片段的引用](https://github.com/jenkinsci/jenkins/blob/master/core/src/main/resources/hudson/PluginManager/table.jelly#L108...L120)，它展示了当检查一个插件更新是否与当前版本兼容时需要考虑的校验。
 
-=== 本地复现问题
+### 本地复现问题
 
 尽管我现在已经对该缺陷的细节了解清楚了，但还没有亲眼见过。因此，对我而言，下一个符合逻辑的步骤就是在本地复现。
 
@@ -103,7 +103,7 @@ image: /images/post-images/2019-05-30-becoming-contributor/pr-merged.png
 正如在它在工单中报告的，该行为是不一致的。在上一个版本中，"_全选_"的行为已经改变（试图改进），是为了只选中兼容的插件。然而，
 正如在截图中看到的，该行为并未像期待的那样。现在，不管是“全选”还是“兼容性的“插件都会被选中，一些有兼容性问题的插件也会被无意中被选中。
 
-=== 尝试修复
+### 尝试修复
 
 当在阅读原始 PR 中关于“全选”行为变更的讨论时，我看到了一个采用分离的"_兼容性的_"按钮的建议，而保留"_全选_"按钮的传统行为。
 我喜欢这个主意，因此，我决定把它作为我的变更提议的一部分。
@@ -111,7 +111,7 @@ image: /images/post-images/2019-05-30-becoming-contributor/pr-merged.png
 在这个阶段，我对需要做的变更有了清晰的想法。包括：1)界面UI，为“兼容的”插件增加一个按钮，2)当按钮点击后 JS 代码应用变更，然后3)
 后端的方法来决定一个插件是否为兼容的。
 
-=== 应用变更
+### 应用变更
 
 正如在贡献指南中推荐的，我创建了一个独立的 feature 分支来处理这个工单。
 
@@ -127,15 +127,15 @@ image: /images/post-images/2019-05-30-becoming-contributor/pr-merged.png
 我们应该[专注于让我们永远不过时的技能](https://github.com/romenrg/evergreen-skills-developers)，而不是只了解特定的技术；
 在特定的场景下，要适应不同的框架，学习一切为了完成任务所需要的新技术，采用跨框架的原则和最佳实践以提供高质量的方案。
 
-=== 结果
+### 结果
 
 经过上面的修改后，UI 界面上出现一个新的选项，三个选项对应的行为也如预期的一致：
 
 !(fixed-select-compatible)[fixed-select-compatible.png]
 
-== 发布变更
+## 发布变更
 
-=== 提交一个 Pull Request
+### 提交一个 Pull Request
 
 在 Jenkins 核心仓库里的贡献指南中，有一章关于[变更提议](https://github.com/jenkinsci/jenkins/blob/master/CONTRIBUTING.md#proposing-changes)的内容，描述了为我们的变更创建一个 Pull Request (PR) 所必须要遵守的步骤。
 
@@ -149,7 +149,7 @@ image: /images/post-images/2019-05-30-becoming-contributor/pr-merged.png
 
 !(pr-created)[pr-created.png]
 
-=== 通过和合并的流程
+### 通过和合并的流程
 
 正如在贡献指南中申明的，一个 PR 需要有两个人通过才能被合并；这可能需要几天到几周的时间。有时候，有一个复查者通过了，一周后没有额外的复查
 也认为足够设置 PR 为 `ready-for-merge`。然而，合并所需要的时间以及通过的数量可能不同，这取决于变更的复杂度或者对 Jenkins Core 的影响面。
@@ -162,7 +162,7 @@ image: /images/post-images/2019-05-30-becoming-contributor/pr-merged.png
 
 !(pr-merged)[pr-merged.png]
 
-=== 发布
+### 发布
 
 每次新的发布，仓库的维护者会选择被添加 `ready-for-merge` 标记的 PR 合并到 master 分支，准备变更日志（通常会采用 PR 作者的提议）并
 继续创建新的版本。此时，PR 的作者不需要有额外的参与。
@@ -176,7 +176,7 @@ image: /images/post-images/2019-05-30-becoming-contributor/pr-merged.png
 鉴于在这篇博客中描述的例子，在合并后 *它发布在了 Jenkins `2.175`*（每周发布版）。并可能会包括在下一个 LTS 中，
 应该是在下个月发布（2019年6月）。
 
-== 完工！
+## 完工！
 
 就这么多！到此，我们已经覆盖了向 Jenkins Core 提出一个新的提议的完整生命流程。我们回顾了从流程的开始，在 Jenkins 缺陷跟踪系统中挑选
 一个工单；一直到最后，发布我们的变更到一个新的 Jenkins 版本。
