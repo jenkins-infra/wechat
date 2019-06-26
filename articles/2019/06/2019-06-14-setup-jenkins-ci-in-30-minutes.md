@@ -23,6 +23,7 @@ poster: "./2019-06-15-setup-jenkins-ci-in-30-minutes/788b731c3a30bba88e622c162ec
 * 必须安装 Docker，有关安装说明，请参见[此处](https://docs.docker.com/install/linux/docker-ce/ubuntu/)；
 * 我们需要在 Docker registry 来推送我们的 Docker 镜像。最简单的方法是在[DockerHub](https://hub.docker.com/)上创建一个帐户。你可以免费创建帐户。也不会收到垃圾广告邮件；
 * 构建工作的 Spring Boot 应用程序。我们将使用前一篇[文章](https://mydeveloperplanet.com/2018/05/16/build-and-deploy-a-spring-boot-app-on-minikube-part-1/)中的 Spring Boot MVC 应用程序。源代码可以在[GitHub](https://github.com/mydeveloperplanet/mykubernetesplanet)上找到，相应的Docker图像可以在[DockerHub](https://github.com/mydeveloperplanet/mykubernetesplanet)上找到。该应用程序包含 `http://localhost:8080/hello` 上的一个 HTTP 端点，并只返回一条 `Hello Kubernetes` 欢迎消息。
+
 ## 2.运行 Jenkins CI
 我们将使用 [Jenkins CI Docker](https://hub.docker.com/r/jenkins/jenkins/) 官方镜像运行 Jenkins 服务。完整的文档可以在[这里](https://github.com/jenkinsci/docker/blob/master/README.md)找到。用以下命令启动容器:
 
@@ -39,10 +40,10 @@ $ docker run -p 8080:8080 --name myjenkins -v jenkins_home:/var/jenkins_home -v 
 * jenkins/jenkins:lts：要使用的 Docker 镜像。我们将使用 LTS 版本，但如果你愿意，也可以使用不太稳定的版本。在撰写本文时，v2.150.1 是 LTS 版本。
 在此之后，你可以通过其名称停止和启动容器：
 
-···
+```
 $ docker stop myjenkins
 $ docker start myjenkins
-···
+```
 
 ## 3.配置 Jenkins 以供首次使用
 一旦容器启动后，我们就可以访问 Jenkins Web 控制台了。当然，我们需要知道 Jenkins 实例的 IP 地址。因此，请执行以下命令：
@@ -111,10 +112,10 @@ This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
 
 在启动容器期间，我们在容器中创建了 `/var/jenkins_home/downloads` 的挂载卷。首先，我们将验证是否可以从容器中访问此路径。执行以下命令：
 
-···
+```
 $ docker exec -it myjenkins ls -l /var/jenkins_home/downloads
 total 0
-···
+```
 
 如上所述返回0个结果时，那么我们就可以继续了。否则，你必须检查在启动容器期间是否输入正确。
 
