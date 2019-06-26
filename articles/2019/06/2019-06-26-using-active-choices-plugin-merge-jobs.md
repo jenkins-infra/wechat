@@ -5,6 +5,8 @@ date: 2019-06-26
 tags: 
 - Jenkins
 - plugin
+keywords:
+- Active-Choices-Plugin
 author: eryajf
 toc: true
 poster: "./2019-06-26-使用Active-Choices-Plugin插件将十个Job合成一个/the_one.jpg"
