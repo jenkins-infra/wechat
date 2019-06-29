@@ -39,7 +39,7 @@ image: /images/post-images/2019-05-30-becoming-contributor/pr-merged.png
 
 在我案例中，我花了一些时间来浏览带 `newbie-friendly` 标签的工单，直到[发现了一个](https://issues.jenkins-ci.org/browse/JENKINS-56477)我似乎感兴趣并看起来有能力修复的：
 
-!(jenkins-newbie-jira-ticket-selected)[jenkins-newbie-jira-ticket-selected.png]
+![jenkins-newbie-jira-ticket-selected](jenkins-newbie-jira-ticket-selected.png)
 
 ### 过程
 
@@ -98,7 +98,7 @@ image: /images/post-images/2019-05-30-becoming-contributor/pr-merged.png
 
 当我点击了底部的“全选”选项，得到了如下结果：
 
-!(jenkins-plugin-manager-updates-selected-bottom)[jenkins-plugin-manager-updates-selected-bottom.png]
+![jenkins-plugin-manager-updates-selected-bottom](jenkins-plugin-manager-updates-selected-bottom.png)
 
 正如在它在工单中报告的，该行为是不一致的。在上一个版本中，"_全选_"的行为已经改变（试图改进），是为了只选中兼容的插件。然而，
 正如在截图中看到的，该行为并未像期待的那样。现在，不管是“全选”还是“兼容性的“插件都会被选中，一些有兼容性问题的插件也会被无意中被选中。
@@ -131,7 +131,7 @@ image: /images/post-images/2019-05-30-becoming-contributor/pr-merged.png
 
 经过上面的修改后，UI 界面上出现一个新的选项，三个选项对应的行为也如预期的一致：
 
-!(fixed-select-compatible)[fixed-select-compatible.png]
+![fixed-select-compatible](fixed-select-compatible.png)
 
 ## 发布变更
 
@@ -147,7 +147,7 @@ image: /images/post-images/2019-05-30-becoming-contributor/pr-merged.png
 我添加了 Jira 工单链接，提供了两条变更日志条目，完成了提交者的检查单，并增加了三位期望的复查者（并介绍了我为什么认为条目的复查会是有价值的）。
 我还添加了工单中提到的原始 PR 链接，以便提供更多的上下文。
 
-!(pr-created)[pr-created.png]
+![pr-created](pr-created.png)
 
 ### 通过和合并的流程
 
@@ -160,7 +160,7 @@ image: /images/post-images/2019-05-30-becoming-contributor/pr-merged.png
 我据此进行了修改。之后，Daniel 再次复查我的 PR 并给了一些小的备注，并被核准。之后一周，没有任何动态，我根据 Daniel 的建议增加了一些修改，
 最后，Daniel 通过我的 PR，这使得 PR 添加上了 `ready-for-merge` 的标签，并在后来的某天被合并了（四月二十六日）。
 
-!(pr-merged)[pr-merged.png]
+![pr-merged]([pr-merged.png)
 
 ### 发布
 
