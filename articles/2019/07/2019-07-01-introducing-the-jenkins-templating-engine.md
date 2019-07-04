@@ -13,7 +13,7 @@ author:   Steven Terrana
 original: https://jenkins.io/blog/2019/05/09/templating-engine/
 translator: linan607
 toc: true
-poster: "./2019-06-27-introducing-the-jenkins-templating-engine/JTE.jpg"
+poster: "./2019-07-01-introducing-the-jenkins-templating-engine/JTE.jpg"
 ---
 
 ![JTE](JTE.jpg)
