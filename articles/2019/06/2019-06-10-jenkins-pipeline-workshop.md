@@ -9,7 +9,7 @@ keywords:
 - jenkins 
 - pipeline 
 - workshop
-author: 社区小编辑
+author: jenkins-zh-robot
 poster: "pipeline-example.png"
 ---
 
