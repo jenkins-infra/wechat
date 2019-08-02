@@ -1,8 +1,7 @@
 keyword: 视频
-msgType: news
-articleCount: 1
-articles:
-- title: "Jenkins 技术视频"
-  description: "不定期会在优酷上发布的视频"
-  picUrl: "https://mmbiz.qpic.cn/mmbiz_png/nh8sibXrvHru5HiaHPj4JriaeUIWFQjp3dWCTicv9d89px6M2xkcDpM0B1CXh3MGCA8SdHWqjElLQjYaaoicSne8A9A/0?wx_fmt=png"
-  url: "http://id.tudou.com/i/UNjg5NDY1OTIwOA"
+msgType: text
+content: |-
+        我们线上或者线下活动的视频会上传到如下地址，尽情关注：
+
+        优酷 https://i.youku.com/jenkinszh
+        哔哩哔哩 https://space.bilibili.com/433584098
