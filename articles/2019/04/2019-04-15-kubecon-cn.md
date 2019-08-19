@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Jenkins 中文社区邀您来上海共同参与2019年的国际开源盛宴"
+descriptioin: "Jenkins 中文社区成员在 KubeCon2019 上的分享"
 tags:
 - cloud-native
 - kubernetes
