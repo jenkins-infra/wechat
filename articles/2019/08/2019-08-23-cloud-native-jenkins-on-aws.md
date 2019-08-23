@@ -8,7 +8,7 @@ keywords:
 - 云原生
 author: Alberto Alvarez
 original: https://medium.com/bench-engineering/cloud-native-jenkins-on-aws-b5c957c4fe18
-translator: 
+translator: shunw
 toc: true
 poster: "butler-in-action.png"
 ---
