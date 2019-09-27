@@ -38,7 +38,7 @@ Jenkins 15周岁啦！Jenkins World 将 DevOps 思想领袖、IT 主管、持续
 
 GSoC 学生 Natasha Stopa 介绍了她的项目——Plugin Installation Manager Library/CLI Tool。这是一个超酷的项目，在社区受到广泛欢迎。
 
-![jenkins-world-contributor-summit](gsoc-student.png)
+![jenkins-world-contributor-summit](gsoc-student.jpeg)
 
 讨论会结尾是博思艾伦咨询公司（Booz Allen Hamilton）的 Steven Terrana 的展示和精彩的 Jenkins 模板引擎。如果你还没有试过这个，请一定不要错过[https://github.com/boozallen/jenkins-templating-engine] (https://github.com/boozallen/jenkins-templating-engine)。
 
@@ -67,11 +67,11 @@ Natasha Stopa 是参与 GSoC 的学生，她介绍了自己的项目 Plugin Inst
 
 最后压轴的就是我了。我展示了正在维护的 Sysdig Secure Scanning 的 Jenkins 插件。感谢每一位当场的朋友。
 
-![jenkins-world-contributor-summit](author-presentation.png)
+![jenkins-world-contributor-summit](author-presentation.jpeg)
 
 就在午餐 demo 之后，我顺道去看了下 Jenkins 开放区。这对社区而言，是讨论议题、自主活动的机会。我真的非常享受这次讨论会，觉得该形式在与会人员中的接受程度很好。
 
-![jenkins-world-contributor-summit](jenkins-open-space.png)
+![jenkins-world-contributor-summit](jenkins-open-space.jpeg)
 
 我们以 Jenkins 组织管理员与 GSoC 学生的合照作为当天活动的结尾。未参与合照的组织管理员为 Lloyd Chang 和 Oleg Nenashev。
 
