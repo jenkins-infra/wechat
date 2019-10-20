@@ -1,23 +1,22 @@
 # Jenkins WeChat
 
-WeChat is similar to [Twitter](https://twitter.com). Almost everyone has their own account with WeChat in China.
+WeChat is similar to [Twitter](https://twitter.com). Almost everyone has an account on WeChat in China.
 
-Jenkins WeChat subscription account will deliver the messages or events from the Jenkins Community.
+The Jenkins WeChat subscription account delivers messages or events from the Jenkins Community.
 
 All articles should be open-source, every contributor could create a PR. Once we reviewed it, your articles could be released.
 
-We have a [robot](https://github.com/jenkins-zh/wechat-backend) who can reply to your messages automatically. 
-Unfortunately, its ability is very limitation. It just can understand a few words 
-from [here](management/auto-reply/keywords-welcome.yml).
+We have a [chatbot](https://github.com/jenkins-zh/wechat-backend) that can reply to your messages automatically. 
+Unfortunately, its ability is very limited; it only understands a few keywords from [here](management/auto-reply/keywords-welcome.yml).
 
 # TODO List
 
-Pick up a task from [here](https://github.com/orgs/jenkins-zh/projects/2), if you're interesting in contribution. See our [contributing guide](CONTRIBUTING.md).
+Feel free to pick up a task from [here](https://github.com/orgs/jenkins-zh/projects/2). If you're interested in contributing to this project, please read our [contributing guide](CONTRIBUTING.md) first.
 
-You can find all contributors at [here](https://github.com/jenkins-infra/wechat/tree/master/management/contributors).
+You can find a list of all contributors [here](https://github.com/jenkins-infra/wechat/tree/master/management/contributors).
 
-# Join us
+# Join us on WeChat
 
-Please scan QRCode below:
+Please scan this QRCode below using the WeChat app:
 
 ![](images/wechat-qrcode.jpg)
