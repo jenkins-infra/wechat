@@ -1,5 +1,7 @@
 # Jenkins WeChat
 
+![GitHub contributors](https://img.shields.io/github/contributors/jenkins-infra/wechat)
+
 WeChat is similar to [Twitter](https://twitter.com). Almost everyone has an account on WeChat in China.
 
 The Jenkins WeChat subscription account delivers messages or events from the Jenkins Community.
