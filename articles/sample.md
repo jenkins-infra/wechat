@@ -1,6 +1,6 @@
 ---
 title: 标题(*)
-description: 描述(*)
+description: 描述(*)大致描述文章的摘要，不可与标题完全一致
 author: 作者(*)
 translator: 译者
 original: 原文链接
