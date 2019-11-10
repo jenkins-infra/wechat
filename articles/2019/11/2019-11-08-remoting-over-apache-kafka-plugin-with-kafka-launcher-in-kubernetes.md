@@ -44,7 +44,7 @@ mvn hpi:run
 
 当用户点击 `Start Kafka on Kubernetes` 按钮时， Jenkins 将根据信息创建一个 Kubernetes 客户机，然后从 `resources` 中应用 zookeeper 和 kafka yaml 规范文件。
 
-![kafka-provisioning-kubernetes-architecture](kafka-provisioning-kubernetes-architecture)
+![kafka-provisioning-kubernetes-architecture](kafka-provisioning-kubernetes-architecture.png)
 
 ## Helm Chart
 
