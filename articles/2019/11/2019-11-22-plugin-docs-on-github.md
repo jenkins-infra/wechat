@@ -12,6 +12,7 @@ keywords:
 - Jenkins 插件
 author: oleg_nenashev
 translator: donhui
+date: 2019-11-22
 poster: jenkins-plugin-docs-to-github.png
 ---
 
