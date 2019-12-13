@@ -13,10 +13,10 @@ keywords:
 - stability
 author: Arnaud Héritier
 translator: wenjunzhangp
-poster: "cover.png"
+poster: "cover.jpg"
 ---
 
-![cover](cover.png)
+![cover](cover.jpg)
 
 管理任何软件都面临着独特的挑战。Jenkins Masters 也不例外。例如，
 
