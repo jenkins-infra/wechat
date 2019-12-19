@@ -62,10 +62,14 @@ jenkins-complete/
 ```
 
 我们来看看它们都是干嘛的：
+
 - **default-user.groovy** - 这个文件用来创建默认用户 admin/admin。
+
 - **executors.groovy** - 这个 Groovy 脚本设置 Jenkins 的执行器数量为 5。一个 Jenkins 执行器相当于一个处理进程，Jenkins job 就是通过它运行在对应的 slave/agent 机器上。
+
 - **create-credential.groovy** - 用来创建 Jenkins 全局凭据的 Groovy 脚本。这个文件可以创建任意的 Jenkins 全局凭据，包括 Docker hub 凭据。我们要修改文件里 Docker hub 的用户名密码，改成我们自己的。这个文件会被复制到镜像里，然后在 Jenkins 启动时运行。
-- **credentials.xml** - XML 凭据文件。这个文件包含了 Github 和 Docker 凭据的。它看起来是这样的：
+
+- **credentials.xml** - XML 凭据文件。这个文件包含了 Github 和 Docker 凭据。它看起来是这样的：
 
 ```xml
 <com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
@@ -117,6 +121,7 @@ DockerHub 的密码加密过程同上。
 容器启动好以后，这个脚本就会根据插件名对应的插件。
 
 - **Dockerfile** - 这是自动化过程中最重要的文件。我们会用这个 Docker 文件来创建完整的 Jenkins 服务和所有配置。理解这个文件对于编写你自己的自动化构建是很重要的。
+
 ```dockerfile
 FROM jenkins/jenkins:lts
 ARG HOST_DOCKER_GROUP_ID
@@ -340,6 +345,7 @@ environment {
 当构建结束后，新的镜像会被上传到 Dockerhub，本地的镜像则会被删除。
 
 - **Dockerfile** - 这个仓库包含的 Dockerfile 用来创建 jar 包的镜像。它会拷贝我的 `my-app-1.0-SNAPSHOT.jar` 到镜像中去。它的内容是这样：
+
 ```dockerfile
 FROM alpine:3.2
 RUN apk --update add openjdk7-jre
