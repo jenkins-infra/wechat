@@ -130,19 +130,15 @@ RUN install-plugins.sh pipeline-graph-analysis:1.9 \
    command-launcher:1.3 \
    docker-workflow:1.18 \
    docker-plugin:1.1.6
-   
 # 设置 admin 用户的环境变量
 ENV JENKINS_USER admin
 ENV JENKINS_PASS admin
-
 # 跳过初始设置向导
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
-
 # 启动脚本，设置执行器的数量、创建 admin 用户
 COPY executors.groovy /usr/share/jenkins/ref/init.groovy.d/
 COPY default-user.groovy /usr/share/jenkins/ref/init.groovy.d/
 COPY create-credential.groovy /usr/share/jenkins/ref/init.groovy.d/
-
 # 命名 job
 ARG job_name_1="sample-maven-job"
 RUN mkdir -p "$JENKINS_HOME"/jobs/${job_name_1}/latest/  
@@ -150,18 +146,16 @@ RUN mkdir -p "$JENKINS_HOME"/jobs/${job_name_1}/builds/1/
 COPY ${job_name_1}_config.xml /usr/share/jenkins/ref/jobs/${job_name_1}/config.xml
 COPY credentials.xml /usr/share/jenkins/ref/
 COPY trigger-job.sh /usr/share/jenkins/ref/
-
 # 添加自定义配置到容器里
 #COPY ${job_name_1}_config.xml "$JENKINS_HOME"/jobs/${job_name_1}/config.xml  
 USER root
 #RUN chown -R jenkins:jenkins "$JENKINS_HOME"/
 RUN chmod -R 777 /usr/share/jenkins/ref/trigger-job.sh
-
 # 用给定的用户组 ID 创建 'Docker' 用户组
 # 将 'jenkins' 用户加到 'Docker' 用户组
 RUN groupadd docker -g ${HOST_DOCKER_GROUP_ID} && \
    usermod -a -G docker jenkins
-   
+
 RUN apt-get update && apt-get install -y tree nano curl sudo
 RUN curl https://get.docker.com/builds/Linux/x86_64/docker-latest.tgz | tar xvz -C /tmp/ && mv /tmp/docker/docker /usr/bin/docker
 RUN curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
