@@ -1,6 +1,6 @@
 ---
 title: "Webhook 通用触发插件"
-description: ""
+description: "介绍通用 Webhook 触发插件，使用 Webhook 插件构建 Jenkins 自动化服务"
 date: 2019-12-23
 original: "https://jenkins.io/blog/2019/12/14/generic-webhook-trigger-plugin/"
 tags:
