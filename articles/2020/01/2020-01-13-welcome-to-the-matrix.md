@@ -1,12 +1,12 @@
 ﻿---
 title: "欢迎使用流水线指令-矩阵"
-date：2019-12-29
+date: 2019-12-29
 description: "介绍了声明式流水线中 `matrix` 指令的使用方法，并介绍了 `matrix` 指令在pipeline中的句式"
 author: Liam Newman
 poster: "cover.jpg"
 translator: 0N0thing  
 original: "https://jenkins.io/blog/2019/11/22/welcome-to-the-matrix/"
-tags：  
+tags: 
 - Jenkins  
 - pipeline  
 ---
