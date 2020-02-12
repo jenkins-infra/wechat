@@ -22,7 +22,7 @@ poster: thanks-kohsuke.png
 
 Jenkins 之旅充满神奇，而且从未间断。我非常喜欢这一切，尤其是与造就 Jenkins 如今成就的世界各地的用户会面与交流。作为项目的创建者，在某个时候，我开始想如何将火炬传递给下一任领导者，如何使人们继续推动它前进。如今，由于有了 CloudBees 和社区，新一代的才华横溢、有才干的领导者正在热情地推动事情向前发展，这真令人高兴。例如，[新选举的董事会成员](https://jenkins.io/blog/2019/12/16/board-election-results/)和[Jenkins X](https://jenkins-x.io/) 的伙伴们。这些新人带来了新的文化和新的代码，并且总的来说，这产生了积极的影响，使 Jenkins 不再局限于[我所谈论的局部最优方法](https://jenkins.io/blog/2018/08/31/shifting-gears/)，他们得到我所有的支持和尊重。实际上，我最近与 Jenkins 的关系更多的是象征意义，有点像日本的天皇或英国的皇后，这就是为什么此公告对 Jenkins 的前进动力几乎没有实际影响的原因。
 
-几年前，我曾经觉得如果我退出的话，天就会塌下开。在 2019 年的某个时刻，我突然发现我没有这种感觉了。这种转变是渐进的、稳定的，所以我不确定自己何时跨过的这道门槛，但是在 2019 年，我显然处于另一端。这样我才知道自己终于可以结束我的这一篇章。回首与 Jenkins 在一起 15 年，与 CloudBees 合作 9 年，这真是很长的一段时间。
+几年前，我曾经觉得如果我退出的话，天就会塌下来。在 2019 年的某个时刻，我突然发现我没有这种感觉了。这种转变是渐进的、稳定的，所以我不确定自己何时跨过的这道门槛，但是在 2019 年，我显然处于另一端。这样我才知道自己终于可以结束我的这一篇章。回首与 Jenkins 在一起 15 年，与 CloudBees 合作 9 年，这真是很长的一段时间。
 
 我希望您会想知道我的新篇章是什么。我将与我的老伙伴 [Harpreet Singh](https://www.linkedin.com/in/singhharpreet/) 创办一家新的创业公司，即 [Launchable](https://launchableinc.com)。自从在 Sun Microsystems 和 JavaEE 工作以来，我就认识他，他是我在 CloudBees 领域的合伙人，从头开始建立 Jenkins 业务。他去 Atlassian 经营 BitBucket 业务已有一段时间，但是现在他和我又回到了一起。许多 CloudBees 人投资了 Launchable，包括 [Sacha Labourey](https://www.linkedin.com/in/sachalabourey)、[Bob Bickel](https://www.linkedin.com/in/bobbickel) 和 [John Vrionis](https://www.linkedin.com/in/johnvrionis)。
 
