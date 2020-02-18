@@ -1,12 +1,12 @@
 ﻿---
-title：2019 年 Google 编程之夏活动报告  
-date：2020-02-18  
-description：主要介绍了 GSoC 2019 活动的几个课题并讲述了整个活动的组织过程  
-author：Martin d'Anjou，Jeff Pearce，Oleg Nenashev，Marky Jackson  
-poster：cover.png  
-translator：0N0thing  
-original：https://jenkins.io/blog/2020/01/29/gsoc-report/#google-summer-of-code-2019-report  
-tags：  
+title: 2019 年 Google 编程之夏活动报告  
+date: 2020-02-18  
+description: 主要介绍了 GSoC 2019 活动的几个课题并讲述了整个活动的组织过程  
+author: Martin d'Anjou，Jeff Pearce，Oleg Nenashev，Marky Jackson  
+poster: cover.png  
+translator: 0N0thing  
+original: https://jenkins.io/blog/2020/01/29/gsoc-report/#google-summer-of-code-2019-report  
+tags:
 - Jenkins  
 - gsoc2019  
 - gsoc  
@@ -14,7 +14,7 @@ tags：
 - events  
 ---
 
-![cover](cover.jpg)
+![cover](cover.png)
 
 Google 编程之夏活动不仅仅是一个夏日的实习项目，对于组织和一些社区的成员来说，这个活动是他们一整年努力的成果。现在，在里斯本举行的 Devops World | Jenkins World 会议以及最后的回顾会议之后，我们宣布 GSoC 2019 正式画上结束的句号。首先我们感谢所有的参与者：学生们、导师们、主题专家、以及其他一些提出课题构想，参与学生选择，社区联系以及一些后期的讨论与回顾的贡献者们。Google 编程之夏活动是一个大型的活动，如果没有 Jenkins 社区的积极参与此次活动也就无法成行。  
 
