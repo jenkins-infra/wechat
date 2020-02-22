@@ -76,7 +76,7 @@ Jenkins UI 和前端框架在Jenkins项目中成为了一个共同的话题，�
 ![multibranch-folder](multibranch-folder.png)
 
 ## 没有完成的项目
-今年并非所有的项目都完成了。我们也在 [Jenkins 流水线 artifact-promotion 插件](https://jenkins.io/projects/gsoc/2019/artifact-promotion-plugin-for-jenkins-pipeline)和[云特性的外部工作区管理插件](https://jenkins.io/projects/gsoc/2019/ext-workspace-manager-cloud-features)进行了尝试，但不幸的是这两个项目都在第一阶段编码后即停止了。无论如何，我们在这些领域得到了许多经验与收获。（请参阅链接的 Jira 门票！）我们希望这些故事的某一点能够被 Jenkins 贡献者实现出来。或许 [Google 编程之夏 2020](https://jenkins.io/blog/2019/12/20/call-for-mentors/) 可以？
+今年并非所有的项目都完成了。我们也在 [Jenkins 流水线 artifact-promotion 插件](https://jenkins.io/projects/gsoc/2019/artifact-promotion-plugin-for-jenkins-pipeline)和[云特性的外部工作区管理插件](https://jenkins.io/projects/gsoc/2019/ext-workspace-manager-cloud-features)进行了尝试，但不幸的是这两个项目都在第一阶段编码后即停止了。无论如何，我们在这些领域得到了许多经验与收获。（请参阅链接的 Jira ticket！）我们希望这些故事的某一点能够被 Jenkins 贡献者实现出来。或许 [Google 编程之夏 2020](https://jenkins.io/blog/2019/12/20/call-for-mentors/) 可以？
 
 ## 以组织层面运营 GSoC 项目
 这里有一些在我们组织 GSoC 前后的一些幕后的小故事跟大家分享。为了给即将涌入进来的学生们做好准备，我们更新了所有的 GSoC 页面，收录进去了我们这几年运营这个项目的所有知识。我们从 2018 年 10 月份开始准备，此时离项目开始还有很长一段时间。主要的目标是解决在 GSoC 2018 期间得到的一些反馈。
