@@ -36,6 +36,7 @@ CD Foundation 为项目提供广泛的服务，第一步是从孵化项目开始
 “我们的团队很高兴加入 CDF。与我们来自 Yahoo 的合作伙伴一起！日本和我们所有的外部贡献者将继续快速提供解决方案，以支持开发人员的工作流程以及与各种持续交付解决方案的互操作性。” Verizon Media/Yahoo 资深工程经理兼 Screwdriver 产品负责人 [Jithin Emmanuel](https://www.linkedin.com/in/jithine/)这样说。
 
 有关参与 Screwdriver 的更多信息，请访问：
+
 * [Screwdriver 首页](https://screwdriver.cd/?siteref=cdf_nav)
 * [Screwdriver 贡献指南](https://docs.screwdriver.cd/about/contributing/)
 * [Screwdriver GitHub](https://github.com/screwdriver-cd)
@@ -44,7 +45,8 @@ CD Foundation 为项目提供广泛的服务，第一步是从孵化项目开始
 * [Screwdriver Meetup](https://www.meetup.com/Bay-Area-CICD-and-DevOps-Meetup/)
 * [Screwdriver 博客](https://blog.screwdriver.cd/)
 
-CD 基金会资源
+CD 基金会资源：
+
 * [加入 CDF](https://cd.foundation/members/join/)
 * [联系 CDF](https://cd.foundation/about/contact/)
 * [CDF 项目](https://cd.foundation/projects/)
