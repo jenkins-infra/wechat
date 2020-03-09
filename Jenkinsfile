@@ -10,9 +10,6 @@ pipeline {
 
     stages{
         stage("Notify"){
-            when {
-                branch 'master'
-            }
             steps{
                 script {
                     try{
