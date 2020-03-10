@@ -1,12 +1,12 @@
 ﻿---
-title：使用 Kubernetes 和 Jenkins 创建一个 CI/CD 流水线  
-date：2020-03-10  
-description：文章主要说明了关于 CI/CD 的知识，通过实验结合 Jenkins，Ansible，Kubernetes 将应用程序部署到 k8s 上。  
-author：Mohamed Ahmed  
-poster：cover.png  
-translator：0N0thing  
-original：https://www.magalix.com/blog/create-a-ci/cd-pipeline-with-kubernetes-and-jenkins  
-tags：  
+title: 使用 Kubernetes 和 Jenkins 创建一个 CI/CD 流水线  
+date: 2020-03-10  
+description: 文章主要说明了关于 CI/CD 的知识，通过实验结合 Jenkins，Ansible，Kubernetes 将应用程序部署到 k8s 上。  
+author: Mohamed Ahmed  
+poster: cover.png  
+translator: 0N0thing  
+original: https://www.magalix.com/blog/create-a-ci/cd-pipeline-with-kubernetes-and-jenkins  
+tags:   
 - DevOps  
 - Kubernetes  
 - Deployment  
@@ -68,7 +68,8 @@ CI/CD 通过引入自动化来解决上述的问题。代码中的每次改动�
 ![pipeline](pipeline.jpg)
 
 ## 第一步：应用程序文件
-我们的实验程序会对任意的 GET 请求回复 ‘Hello World’。创建一个名称为 main.go 的文件然后添加如下的代码：  
+我们的实验程序会对任意的 GET 请求回复 ‘Hello World’。创建一个名称为 main.go 的文件然后添加如下的代码： 
+
 ```
 package main
 
@@ -91,7 +92,9 @@ func main() {
    log.Fatal(http.ListenAndServe(":8080", nil))
 }
 ```
-当我们构建一个 CD 流水线时，我们应该进行一些测试。我们代码是如此的简单以至于它仅仅只需要一个测试用例；能够确保我们在输入根 URL 时得到正确的字符串。在同目录下创建名为 main_test.go 的文件然后添加如下代码：  
+
+当我们构建一个 CD 流水线时，我们应该进行一些测试。我们代码是如此的简单以至于它仅仅只需要一个测试用例；能够确保我们在输入根 URL 时得到正确的字符串。在同目录下创建名为 main_test.go 的文件然后添加如下代码： 
+
 ```
 package main
 
@@ -114,11 +117,13 @@ func main() {
    log.Fatal(http.ListenAndServe(":8080", nil))
 }
 ```
+
 我们同样有一些其他用来帮助我们部署应用程序的文件，称为：  
 
 **Dockerfile**
 
 这就是我们对我们的应用进行打包的地方：
+
 ```
 FROM golang:alpine AS build-env
 RUN mkdir /go/src/app && apk update && apk add git
@@ -131,11 +136,13 @@ WORKDIR /app
 COPY --from=build-env /go/src/app/app .
 ENTRYPOINT [ "./app" ]
 ```
+
 Dcokerfile 是一个[多阶段](https://docs.docker.com/develop/develop-images/multistage-build/)的文件能让镜像保持的越小越好。它从基于 golang:alpine 构建镜像开始。生成的二进制文件在第二个镜像中使用，它仅仅是一个[临时](https://hub.docker.com/_/scratch/)的镜像，这个镜像没有依赖或者库文件，只有用来启动应用的二进制文件。
 
 **Service**
 
-由于我们使用 Kubernetes 作为托管该应用程序的平台，我们需要至少一个 service 和一个 deployment。我们的 service.yml 长这样：  
+由于我们使用 Kubernetes 作为托管该应用程序的平台，我们需要至少一个 service 和一个 deployment。我们的 service.yml 长这样：
+
 ```
 apiVersion: v1
 kind: Service
@@ -151,11 +158,13 @@ spec:
       nodePort: 32000
   type: NodePort
 ```
+
 这个文件的定义没有什么特别的地方，只有一个 NodePort 作为其类型的  Service。它会监听任何 IP 地址的集群节点上的 32000 端口。传入的连接将中继到 8080 端口上。而作为内部通信，这个服务在 80 端口上进行监听。  
 
 **deployment**
 
 应用程序本身，一旦容器化了，就可以通过一个 Deployment 资源部署到 Kubernetes。deployment.yml 如下所示：
+
 ```
 apiVersion: apps/v1
 kind: Deployment
@@ -180,11 +189,13 @@ spec:
           requests:
             cpu: 10m
 ```
+
 这个部署文件里的定义最有意思的地方就是 image 部分。不同于硬编码镜像名称和标签的方式，我们使用了一个变量。后面的内容，我们会看到怎样将该变量用作 Ansible 的模板以及通过命令替换镜像名称（以及部署用的其他参数）。  
 
 **Playbook**
 
 这个实验中，我们使用 Ansible 作为部署工具。还有许多其他的方式用来部署 Kubernetes 资源包括 [Helm Charts](https://helm.sh/)，但是我认为 Ansible 是一个相对简单一些的选择。Ansible 使用 playbooks 来组织它的操作。我们的 playbook.yml 文件如下所示：
+
 ```
 - hosts: localhost
   tasks:
@@ -201,6 +212,7 @@ spec:
       namespace: default
       definition: ""
 ```
+
 Ansible 已经包括了 [k8s 模块](https://docs.ansible.com/ansible/latest/modules/k8s_module.html)用来处理和 Kubernetes API 服务器的通信。所以我们不需要安装 [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) 但是我们需要一个有效的 kubeconfig 文件来连接到集群（后面会详细介绍）。让我们快速讨论一下这个 playbook 重要的部分：
 
 - 这个 playbook 用来部署服务以及部署资源到集群上。
@@ -217,23 +229,32 @@ Ansible 的安装非常简单；只需要安装 Python 然后使用 pip 安装 A
 
 1. 登录 Jenkins 实例。  
 
-2. 安装 Python3，Ansible，以及 openshift 模块：  
+2. 安装 Python3，Ansible，以及 openshift 模块：
+
 ```
 sudo apt update && sudo apt install -y python3 && sudo apt install -y python3-pip && sudo pip3 install ansible && sudo pip3 install openshift
 ```
+
 3. 默认情况下，pip 会将二进制安装到用户主文件夹的隐藏目录中。我们需要添加这个路径到 $PATH 环境变量中因此我们可以很轻松调用如下命令：  
+
 ```
 echo "export PATH=$PATH:~/.local/bin" >> ~/.bashrc && . ~/.bashrc
 ```
-4. 安装必要的 Ansible 角色用来部署一个 Jenkins 实例。  
+
+4. 安装必要的 Ansible 角色用来部署一个 Jenkins 实例。
+
 ```
 ansible-galaxy install geerlingguy.jenkins
 ```
-5. 安装 Dcoker 角色：  
+
+5. 安装 Dcoker 角色：
+
 ```
 ansible-galaxy install geerlingguy.docker
 ```
-6. 创建一个 playbook.yml 添加下面的代码：  
+
+6. 创建一个 playbook.yml 添加下面的代码：
+
 ```
 - hosts: localhost
   become: yes
@@ -245,6 +266,7 @@ ansible-galaxy install geerlingguy.docker
     - role: geerlingguy.jenkins
     - role: geerlingguy.docker
 ```
+
 7. 通过下面的命令运行这个 playbook：ansible-playbook playbook.yaml。注意到我们使用实例的公共 IP 地址作为 Jenkins 的主机地址。如果你使用 DNS，你或许需要将该实例更换成 DNS 域名。另外，注意你必须在 playbook 运行之前允许 8080 端口通过防火墙（如果有的话）。  
 
 8. 过几分钟，Jenkins 应该会被安装完成，你可以通过这台机器的 IP 地址（或者是 DNS 域名）还有端口8080访问到 Jenkins：  
@@ -263,10 +285,12 @@ ansible-galaxy install geerlingguy.docker
 ## 第三步：配置 Jenkins 用户来连接到集群上
 
 之前我们提到了，这个实验假设你已经有一个启动的 Kubernetes 集群。为了让 Jenkins 连接到这个集群上，我们需要添加必要的 kubeconfig 文件。在这个特定的实验中，我们使用主机在 Google Cloud 的 Kubernetes 集群所以我们可以使用 gcloud command。因环境而异。但是不管什么情况，我们都必须拷贝 kubeconfig 文件到 Jenkins 的用户目录下，如下所示：
+
 ```
 $ sudo cp ~/.kube/config ~jenkins/.kube/
 $ sudo chown -R jenkins: ~jenkins/.kube/
 ```
+
 需要记住的是你使用的账号必须要有必要的权限用来创建管理 Deployment 和 Service。
 
 ## 第四步：创建 Jenkins 流水线任务
@@ -296,6 +320,7 @@ $ sudo chown -R jenkins: ~jenkins/.kube/
 
 ## 第六步：创建 Jenkinsfile
 Jenkinsfile 是用来指导 Jenkins 如何构建，测试，容器化，发布以及交付我们的应用程序的文件。我们的 Jenkinsfile 长这样：
+
 ```
 pipeline {
    agent any
@@ -363,6 +388,7 @@ pipeline {
    }
 }
 ```
+
 这个文件比它本身看起来要简单的多。基本上，这个流水线包括了 4 个阶段：
 
 1. 在哪里构建我们的 Go 二进制文件从而确保构建过程中无错误出现。
@@ -401,21 +427,26 @@ pipeline {
 5. 如果任务成功了，我们可以使用下面的命令验证我们部署好的的应用程序：
 
 获取节点的 IP 地址：
+
 ```
 kubectl get nodes -o wide
 NAME                                          STATUS   ROLES    AGE   VERSION          INTERNAL-IP   EXTERNAL-IP     OS-IMAGE                             KERNEL-VERSION   CONTAINER-RUNTIME
 gke-security-lab-default-pool-46f98c95-qsdj   Ready       7d    v1.13.11-gke.9   10.128.0.59   35.193.211.74   Container-Optimized OS from Google   4.14.145+        docker://18.9.7
 ```
+
 现在让我们向应用程序发起一个 HTTP 请求：
+
 ```
 $ curl 35.193.211.74:32000
 {"message": "hello world"}
 ```
+
 OK，我们可以看到应用程序工作正常。让我们在代码中故意制造一个错误以确保流水线不会将错误的代码应用到目标环境中：
 
 将应显示的信息修改为“Hello World！”，注意到我们将每个单词的首字母大写并在末尾添加了一个感叹号。然而客户或许不想让信息这样显示，流水线应该在 Test 阶段停止。  
 
 首先，让我们做一些改动。main.go 文件现在看起来是这样的：
+
 ```
 package main
 
@@ -438,7 +469,9 @@ func main() {
    log.Fatal(http.ListenAndServe(":8080", nil))
 }
 ```
+
 下一步，让我们提交和推送我们的代码：
+
 ```
 $ git add main.go
 $ git commit -m "Changes the greeting message"                                                                                                       
@@ -454,6 +487,7 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/MagalixCorp/k8scicd.git
    7954e03..24a310e  master -> master
 ```
+
 回到 Jenkins，我们可以看到最后一次构建失败了：
 
 ![pipeline-result](pipeline-result.jpg)
