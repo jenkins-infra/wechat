@@ -1,7 +1,7 @@
 ---
 title: "Jenkins 每周版更新"
 description: "本次更新的版本包括：2.180~2.184"
-date: 2019-07-09
+date: 2019-07-18
 tags:
 - jenkins
 - release
