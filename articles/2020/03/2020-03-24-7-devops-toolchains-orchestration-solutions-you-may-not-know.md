@@ -4,7 +4,7 @@ date: 2020-03-24
 description: 介绍了 7 种在现代软件开发过程中使用到的工具链编排解决方案  
 author: Souvik Banerjee  
 poster: cover.jpg  
-translator: s1mple_zj  
+translator: 0N0thing  
 original: https://dzone.com/articles/7-devops-toolchain-orchestration-solution-you-may  
 tags:   
 - DevOps  
