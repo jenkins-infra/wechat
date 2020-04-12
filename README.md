@@ -1,3 +1,5 @@
+**请注意：该仓库已归档，新的文章请提交到 [jenkins-zh](https://github.com/jenkins-zh/jenkins-zh)**。
+
 # Jenkins WeChat
 
 ![GitHub contributors](https://img.shields.io/github/contributors/jenkins-infra/wechat)
